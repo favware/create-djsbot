@@ -1,0 +1,9 @@
+{
+  "name": "create-discord-commando-bot",
+  "version": "1.0.0",
+  "description": "CLI for easily bootstrapping a DiscordJS bot with the Commando framework",
+  "main": "index.js",
+  "repository": "https://github.com/favna/create-discord-commando-bot",
+  "author": "Jeroen Claassens",
+  "license": "MIT"
+}
