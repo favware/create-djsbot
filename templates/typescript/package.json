@@ -1,0 +1,62 @@
+{
+  "name": "{{name}}",
+  "version": "1.0.0",
+  "description": "{{description}}",
+  "author": "{{author}}",
+  "license": "{{license}}",
+  "repository": "{{repo}}",
+  "main": "dist/index.js",
+  "private": true,
+  "engines": {
+    "node": ">=8"
+  },
+  "scripts": {},
+  "dependencies": {
+    "@discordjs/uws": "^11",
+    "@favware/ytdl-prismplayer": "^1",
+    "awesome-commando": "^3",
+    "awesome-djs": "^13",
+    "better-sqlite3": "^5",
+    "common-tags": "^1",
+    "dotenv": "^8",
+    "erlpack": "^0.1.2",
+    "libsodium-wrappers": "^0.7.4",
+    "module-alias": "^2",
+    "node-opus": "^0.3.2",
+    "prism-media": "^1",
+    "zlib-sync": "^0.1.4"
+  },
+  "devDependencies": {
+    "@favware/tslint-config": "^1",
+    "@types/better-sqlite3": "~5.2",
+    "@types/common-tags": "~1.8",
+    "@types/dotenv": "~6.1",
+    "@types/gulp": "^4.0.6",
+    "@types/gulp-terser": "~1.2",
+    "@types/libsodium-wrappers": "~0.7",
+    "@types/module-alias": "~2.0",
+    "@types/node": "~12.0",
+    "@types/ws": "~6.0",
+    "@types/yargs": "^13.0.0",
+    "concurrently": "^4",
+    "copyfiles": "^2",
+    "cross-env": "^5",
+    "gulp-replace": "^1",
+    "gulp-terser": "^1",
+    "gulp-typescript": "^5",
+    "gulp": "^4",
+    "replace": "^1",
+    "rimraf": "^2",
+    "terser-folder": "^2",
+    "ts-node": "^8",
+    "tslib": "^1",
+    "tslint": "^5",
+    "typescript": "^3",
+    "yargs": "^13.2.2"
+  },
+  "files": [
+    "dist/**/*.js",
+    "dist/**/*.json",
+    "!dist/.env"
+  ]
+}

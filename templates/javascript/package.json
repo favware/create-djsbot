@@ -1,0 +1,42 @@
+{
+  "name": "{{name}}",
+  "version": "1.0.0",
+  "description": "{{description}}",
+  "author": "{{author}}",
+  "license": "{{license}}",
+  "repository": "{{repo}}",
+  "main": "dist/index.js",
+  "engines": {
+    "node": ">=8"
+  },
+  "scripts": {},
+  "dependencies": {
+    "@discordjs/uws": "^11",
+    "@favware/ytdl-prismplayer": "^1",
+    "awesome-commando": "^3",
+    "awesome-djs": "^13",
+    "better-sqlite3": "^5",
+    "common-tags": "^1",
+    "dotenv": "^8",
+    "libsodium-wrappers": "^0.7.4",
+    "node-opus": "^0.3.2",
+    "prism-media": "^1",
+    "zlib-sync": "^0.1.4"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "~5.2",
+    "@types/common-tags": "~1.8",
+    "@types/dotenv": "~6.1",
+    "@types/libsodium-wrappers": "~0.7",
+    "@types/node": "~12.0",
+    "@types/ws": "~6.0",
+    "concurrently": "^4",
+    "cross-env": "^5",
+    "eslint-config-standard": "^12",
+    "eslint": "^5",
+    "eslint-plugin-import": "^2",
+    "eslint-plugin-node": "^7",
+    "eslint-plugin-promise": "^4",
+    "eslint-plugin-standard": "^4"
+  }
+}
