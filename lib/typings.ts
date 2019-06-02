@@ -23,6 +23,8 @@ export type YargResult = {
     gitinit: boolean;
     manager: 'npm' | 'yarn';
     template: 'javascript' | 'typescript';
+    prefix: '!' | string;
+    ownerid: string;
 };
 
 export interface ICreateDiscordBotInfo extends YargResult {
@@ -37,4 +39,6 @@ export type DefaultYargOptions = {
     template: 'javascript' | 'typescript';
     description: string;
     repo: string;
+    prefix: '!' | string;
+    ownerid: string;
 };

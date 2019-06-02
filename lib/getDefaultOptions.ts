@@ -15,6 +15,8 @@ export const fetchDefaults = async (name: string, author: string): Promise<Defau
         template: 'javascript',
         description: 'Discord bot bootstrapped with create-discordbot',
         repo: '',
+        prefix: '!',
+        ownerid: '',
     };
 
     if (gitConfigPath && !author) {

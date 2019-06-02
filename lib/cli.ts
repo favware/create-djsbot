@@ -52,6 +52,14 @@ export const setupBoilerplate = () => {
                 describe: 'Do you want to use JavaScript or TypeScript?',
                 choices: ['javascript', 'typescript'],
             },
+            prefix: {
+                type: 'input',
+                describe: 'What is the bot prefix you want to set as default?',
+            },
+            ownerid: {
+                type: 'input',
+                describe: 'What is your Discord userID that will be registered as the bot owner?',
+            },
         };
 
         yargsInteractive()
@@ -76,6 +84,8 @@ export const setupBoilerplate = () => {
                     if (!result.manager) result.manager = defaults.manager;
                     if (!result.template) result.template = defaults.template;
                     if (!result.repo) result.repo = defaults.repo;
+                    if (!result.prefix) result.prefix = defaults.prefix;
+                    if (!result.ownerid) result.ownerid = defaults.ownerid;
                     if (!hasOwnProperty<typeof result>(result, 'gitinit')) result.gitinit = true;
 
                     await createDiscordbot(result);
