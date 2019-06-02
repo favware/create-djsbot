@@ -12,11 +12,11 @@
     "noFallthroughCasesInSwitch": true,
     "noErrorTruncation": true,
     "noImplicitReturns": true,
-    // "noUnusedLocals": true,
+    "noUnusedLocals": true,
     "removeComments": true,
     "strict": true,
     "declaration": true,
-    "importHelpers": true
+    "importHelpers": true,
   },
   "include": ["lib/*.ts"],
   "exclude": ["node_modules", "dist"]

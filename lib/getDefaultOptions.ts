@@ -1,11 +1,12 @@
 import getGitConfigPath from 'git-config-path';
 import githubUsername from 'github-username';
+import { promise as cliSpinner } from 'ora';
 import { sync as parseGitConfig } from 'parse-git-config';
 import which from 'which';
 
-import { DefaultYargOptions } from './create-discordbot';
+import { DefaultYargOptions } from './typings';
 
-export const fetchDefaults = async (name: string): Promise<DefaultYargOptions> => {
+export const fetchDefaults = async (name: string, author: string): Promise<DefaultYargOptions> => {
     const gitConfigPath = getGitConfigPath('global');
     const defaultValues: DefaultYargOptions = {
         author: 'BotDeveloper',
@@ -16,19 +17,21 @@ export const fetchDefaults = async (name: string): Promise<DefaultYargOptions> =
         repo: '',
     };
 
-    if (gitConfigPath) {
+    if (gitConfigPath && !author) {
         const gitConfig = parseGitConfig({ path: gitConfigPath });
 
         if (gitConfig.github && gitConfig.github.user) {
             defaultValues.author = gitConfig.github.user;
         } else if (gitConfig.user && gitConfig.user.email) {
-            defaultValues.author = await githubUsername(gitConfig.user.email, '75062aad298a8515d4b3e43a8ff18ac249ac3bf8');
+            const username = githubUsername(gitConfig.user.email, '');
+            cliSpinner(username, `Fetching GitHub username for your configured GitHub email`);
+            defaultValues.author = await username;
         }
     }
 
     if (which.sync('yarn', { nothrow: true })) defaultValues.manager = 'yarn';
 
-    return {...defaultValues, repo: `https://github.com/${defaultValues.author}/${name}.git`}
+    return {...defaultValues, repo: `https://github.com/${defaultValues.author}/${name}.git`};
 };
 
 export default fetchDefaults;

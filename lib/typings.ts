@@ -1,12 +1,12 @@
-import { Option, OptionData } from 'yargs-interactive';
+import { OptionData } from 'yargs-interactive';
 
-export interface YargsOptionData extends OptionData {
+export interface IYargsOptionData extends OptionData {
     type: 'input' | 'confirm' | 'list';
     choices?: string[];
 }
 
 export type YargOptions = {
-    [key: string]: YargsOptionData | { default: boolean };
+    [key: string]: IYargsOptionData | { default: boolean };
 };
 
 export type YargResult = {
@@ -23,6 +23,11 @@ export type YargResult = {
     gitinit: boolean;
     manager: 'npm' | 'yarn';
     template: 'javascript' | 'typescript';
+};
+
+export interface ICreateDiscordBotInfo extends YargResult {
+    shortName?: string;
+    botDestination?: string;
 }
 
 export type DefaultYargOptions = {
@@ -32,4 +37,4 @@ export type DefaultYargOptions = {
     template: 'javascript' | 'typescript';
     description: string;
     repo: string;
-}
+};
