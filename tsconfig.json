@@ -12,7 +12,7 @@
     "noFallthroughCasesInSwitch": true,
     "noErrorTruncation": true,
     "noImplicitReturns": true,
-    "noUnusedLocals": true,
+    // "noUnusedLocals": true,
     "removeComments": true,
     "strict": true,
     "declaration": true,
