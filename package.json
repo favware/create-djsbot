@@ -1,21 +1,21 @@
 {
-  "name": "create-discord-bot",
+  "name": "@favware/create-discordbot",
   "version": "1.0.0",
   "description": "CLI for easily bootstrapping a DiscordJS bot with the Commando framework",
   "main": "./dist/index.js",
   "typings": "./dist/index.ts",
   "bin": {
-    "create-discord-bot": "./dist/index.js"
+    "create-discordbot": "./dist/index.js"
   },
-  "author": "Jeroen Claassens",
+  "author": "@favware",
   "license": "MIT",
   "homepage": "https://favware.tech/creatediscordbot",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/favware/create-discord-bot.git"
+    "url": "git+https://github.com/favware/create-discordbot.git"
   },
   "bugs": {
-    "url": "https://github.com/favware/create-discord-bot/issues"
+    "url": "https://github.com/favware/create-discordbot/issues"
   },
   "engines": {
     "node": ">=8.0.0"
