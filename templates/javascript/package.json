@@ -9,18 +9,27 @@
   "engines": {
     "node": ">=8"
   },
-  "scripts": {},
+  "scripts": {
+    "lint": "eslint --fix src",
+    "start": "cross-env NODE_ENV=development node ./src/app.js",
+    "start:prod": "cross-env NODE_ENV=production node ./src/app.js",
+    "serve": "pm2 start pm2.ecosystem.yml --env production",
+    "serve:dev": "pm2 start pm2.ecosystem.yml"
+  },
   "dependencies": {
-    "@discordjs/uws": "^11",
+    "@discordjs/uws": "^10",
     "@favware/ytdl-prismplayer": "^1",
-    "awesome-commando": "^3",
-    "awesome-djs": "^13",
-    "better-sqlite3": "^5",
     "common-tags": "^1",
+    "discord.js": "^11.5.1",
+    "discord.js-commando": "discordjs/commando#djs-v11",
     "dotenv": "^8",
     "libsodium-wrappers": "^0.7.4",
+    "moment": "^2.24.0",
+    "moment-duration-format": "^2.2.2",
     "node-opus": "^0.3.2",
     "prism-media": "^1",
+    "sqlite": "^3.0.3",
+    "winston": "^3.2.1",
     "zlib-sync": "^0.1.4"
   },
   "devDependencies": {
@@ -32,8 +41,8 @@
     "@types/ws": "~6.0",
     "concurrently": "^4",
     "cross-env": "^5",
-    "eslint-config-standard": "^12",
     "eslint": "^5",
+    "eslint-config-standard": "^12",
     "eslint-plugin-import": "^2",
     "eslint-plugin-node": "^7",
     "eslint-plugin-promise": "^4",

@@ -20,9 +20,26 @@ In the project directory, you can run:
 Runs the discord bot in development mode<br>
 Requires you have set the token in the `.env` file!
 
+### `npm start:prod`
+
+Runs the discord bot in production mode<br>
+Requires you have set the token in the `.env` file!
+
 ### `npm run lint`
 
 Checks your code for linting errors
+
+### `npm serve`
+
+Runs the bot in production mode using the NodeJS process manager PM2.<br>
+Requires you have set the token in the `.env` file!<br>
+Requires you have `pm2` installed globally (`npm install -g pm2`)
+
+### `npm serve:dev`
+
+Runs the bot in development mode using the NodeJS process manager PM2.<br>
+Requires you have set the token in the `.env` file!<br>
+Requires you have `pm2` installed globally (`npm install -g pm2`)
 
 ## Documenation
 
