@@ -4,14 +4,7 @@ import chalk from 'chalk';
 import { oneLine, stripIndent } from 'common-tags';
 import yargsInteractive from 'yargs-interactive';
 import { YargOptions, YargResult } from './create-discordbot';
-
-type defaultOptions = {
-    author: string;
-    license: 'MIT' | 'GPL-3.0-or-later' | 'Apache-2.0' | 'Unlicense' | 'MPL-2.0';
-    manager: 'npm' | 'yarn'
-    template: 'javascript' | 'typescript';
-    description: string;
-};
+import getDefaultOptions from './getDefaultOptions';
 
 const hasOwnProperty = <O = undefined>(
     obj: O extends undefined ? object : O, prop: O extends undefined ? any : keyof O
@@ -19,14 +12,6 @@ const hasOwnProperty = <O = undefined>(
 
 export const createDiscordbot = () => {
     try {
-        const defaults: defaultOptions = {
-            author: 'blah',
-            license: 'MIT',
-            manager: 'npm',
-            template: 'javascript',
-            description: 'Discord bot bootstrapped with create-discordbot',
-        };
-
         const yargOptions: YargOptions = {
             interactive: {
                 default: true,
@@ -78,13 +63,17 @@ export const createDiscordbot = () => {
                     ${chalk.green('create-discordbot')} --name mybot
             `)
             .interactive(yargOptions)
-            .then((result: YargResult) => {
+            .then(async (result: YargResult) => {
                 if (!result.name) throw new Error('no_name');
+
+                const defaults = await getDefaultOptions(result.name);
+
                 if (!result.description) result.description = defaults.description;
                 if (!result.author) result.author = defaults.author;
                 if (!result.license) result.license = defaults.license;
                 if (!result.manager) result.manager = defaults.manager;
                 if (!result.template) result.template = defaults.template;
+                if (!result.repo) result.repo = defaults.repo;
                 if (!hasOwnProperty<typeof result>(result, 'gitinit')) result.gitinit = true;
 
                 // tslint:disable-next-line

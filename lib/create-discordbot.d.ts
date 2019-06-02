@@ -24,3 +24,12 @@ export type YargResult = {
     manager: 'npm' | 'yarn';
     template: 'javascript' | 'typescript';
 }
+
+export type DefaultYargOptions = {
+    author: string;
+    license: 'MIT' | 'GPL-3.0-or-later' | 'Apache-2.0' | 'Unlicense' | 'MPL-2.0';
+    manager: 'npm' | 'yarn'
+    template: 'javascript' | 'typescript';
+    description: string;
+    repo: string;
+}
