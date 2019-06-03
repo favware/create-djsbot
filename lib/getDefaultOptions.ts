@@ -17,6 +17,7 @@ export const fetchDefaults = async (name: string, author: string): Promise<Defau
         repo: '',
         prefix: '!',
         ownerid: '',
+        token: '',
     };
 
     if (gitConfigPath && !author) {

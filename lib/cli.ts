@@ -27,7 +27,7 @@ export const setupBoilerplate = () => {
             },
             author: {
                 type: 'input',
-                describe: 'Who is the author of the bot?',
+                describe: 'Who is the author of the bot? (GitHub username)',
             },
             license: {
                 type: 'list',
@@ -60,6 +60,10 @@ export const setupBoilerplate = () => {
                 type: 'input',
                 describe: 'What is your Discord userID that will be registered as the bot owner?',
             },
+            token: {
+                type: 'input',
+                describe: 'And lastly, do you already have a token the bot will use?',
+            },
         };
 
         yargsInteractive()
@@ -86,6 +90,7 @@ export const setupBoilerplate = () => {
                     if (!result.repo) result.repo = defaults.repo;
                     if (!result.prefix) result.prefix = defaults.prefix;
                     if (!result.ownerid) result.ownerid = defaults.ownerid;
+                    if (!result.token) result.token = defaults.token;
                     if (!hasOwnProperty<typeof result>(result, 'gitinit')) result.gitinit = true;
 
                     await createDiscordbot(result);

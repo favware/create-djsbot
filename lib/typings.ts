@@ -10,11 +10,9 @@ export type YargOptions = {
 };
 
 export type YargResult = {
-    _: any[];
     help: boolean;
     version: boolean;
     interactive: boolean;
-    '$0': string;
     name: string;
     description: string;
     author: string;
@@ -25,6 +23,7 @@ export type YargResult = {
     template: 'javascript' | 'typescript';
     prefix: '!' | string;
     ownerid: string;
+    token: string;
 };
 
 export interface ICreateDiscordBotInfo extends YargResult {
@@ -41,4 +40,5 @@ export type DefaultYargOptions = {
     repo: string;
     prefix: '!' | string;
     ownerid: string;
+    token: string;
 };
