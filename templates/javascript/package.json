@@ -11,10 +11,8 @@
   },
   "scripts": {
     "lint": "eslint --fix src",
-    "start": "cross-env NODE_ENV=development node ./src/app.js",
-    "start:prod": "cross-env NODE_ENV=production node ./src/app.js",
-    "serve": "pm2 start pm2.ecosystem.yml --env production",
-    "serve:dev": "pm2 start pm2.ecosystem.yml"
+    "start": "node ./src/app.js",
+    "serve": "pm2 start pm2.ecosystem.yml"
   },
   "dependencies": {
     "@discordjs/uws": "^10",

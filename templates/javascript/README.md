@@ -6,10 +6,11 @@ This project was bootstrapped with [Create Discord Bot](https://favware.tech/cre
 
 ## Before running any code
 
-This project uses dotenv for configuration such as your token. The values are stored in the .env file you'll find in the same folder as this README.
+This project uses dotenv for configuration such as your token. The values are stored in the .env file you'll find in the same folder as this README. If you didn't set the token during setup you'll have to enter it in the file between the `" "` at the `BOT_TOKEN` line. For example:
 
-In this README you'll find 2 empty values, `PRODUCTION_TOKEN` and `DEVELOPMENT_TOKEN`. You should fill out BOTH of these values before running the bot.
-The two tokens can be the same however it is encouraged that you create a seperate bot application for development than for production so you're not writing potentially unstable code in the app running in production. That's what these tokens are for. When the `NODE_ENV` environment variable is set to `development` then the `DEVELOPMENT_TOKEN` will be used, otherwise the `PRODUCTION_TOKEN` will be used.
+```dotenv
+BOT_TOKEN="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"
+```
 
 ## Available Scripts
 
@@ -17,12 +18,7 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Runs the discord bot in development mode<br>
-Requires you have set the token in the `.env` file!
-
-### `npm start:prod`
-
-Runs the discord bot in production mode<br>
+Runs the discord bot<br>
 Requires you have set the token in the `.env` file!
 
 ### `npm run lint`
@@ -31,13 +27,7 @@ Checks your code for linting errors
 
 ### `npm serve`
 
-Runs the bot in production mode using the NodeJS process manager PM2.<br>
-Requires you have set the token in the `.env` file!<br>
-Requires you have `pm2` installed globally (`npm install -g pm2`)
-
-### `npm serve:dev`
-
-Runs the bot in development mode using the NodeJS process manager PM2.<br>
+Runs the bot using the NodeJS process manager PM2.<br>
 Requires you have set the token in the `.env` file!<br>
 Requires you have `pm2` installed globally (`npm install -g pm2`)
 
