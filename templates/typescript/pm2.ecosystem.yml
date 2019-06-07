@@ -1,7 +1,10 @@
+# This file defines the project configurations that can be used in for PM2
+# Once you have installed pm2 (npm install -g pm2) you can call this script with
+# either "pm2 start pm2.ecosystem.yml" or "npm run serve"
+# PM2 is amazing because it automatically runs in the background
+# Has build in monitoring features and can be configured to run your bot automatically
+# in case the hosting server ever restarts!
+
 apps:
   script: './dist/app.js'
   name: '{{name}}'
-  env:
-    NODE_ENV: development
-  env_production:
-    NODE_ENV: production

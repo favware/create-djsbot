@@ -10,7 +10,26 @@
   "engines": {
     "node": ">=8"
   },
-  "scripts": {},
+  "scripts": {
+    "gulp": "gulp",
+    "lint": "tslint -p . -c ./tslint.json --format verbose --fix",
+    "clean": "rimraf ./dist",
+    "prebuild": "yarn clean && yarn lint",
+    "build": "tsc",
+    "postbuild": "yarn copyfiles && yarn replace && yarn terser",
+    "start": "node ./dist/app.js",
+    "serve": "pm2 start pm2.ecosystem.yml",
+    "copyfiles:databases": "copyfiles -u 1 ./src/data/databases/* ./dist",
+    "copyfiles:env": "copyfiles -u 1 ./src/.env ./dist",
+    "copyfiles:dex": "copyfiles -u 1 ./src/data/dex/*.json ./dist",
+    "copyfiles": "concurrently \"yarn copyfiles:databases\" \"yarn copyfiles:env\"",
+    "replace:ts-flag": "replace --silent \"typescript: true,\" \"typescript: false,\" ./dist/Ribbon.js",
+    "replace:commands-path": "replace --silent \".registerCommandsIn\\({\\n\\s+dirname.+\\n\\s+filter.+\\n\\s+}\\);\" \".registerCommandsIn(path_1.default.join(__dirname, 'commands'));\" ./dist/Ribbon.js",
+    "replace:types-path": "replace --silent \".registerTypesIn\\({\\n\\s+dirname.+\\n\\s+filter.+\\n\\s+}\\)\" \".registerTypesIn(path_1.default.join(__dirname, 'components/commandoTypes'))\" ./dist/Ribbon.js",
+    "replace": "yarn replace:ts-flag && yarn replace:commands-path && yarn replace:types-path",
+    "terser": "terser-folder ./dist -eo ./dist -x .js",
+    "prepublishOnly": "yarn build"
+  },
   "dependencies": {
     "@discordjs/uws": "^11",
     "@favware/ytdl-prismplayer": "^1",
@@ -24,6 +43,7 @@
     "module-alias": "^2",
     "node-opus": "^0.3.2",
     "prism-media": "^1",
+    "winston": "^3.2.1",
     "zlib-sync": "^0.1.4"
   },
   "devDependencies": {
@@ -41,10 +61,10 @@
     "concurrently": "^4",
     "copyfiles": "^2",
     "cross-env": "^5",
+    "gulp": "^4",
     "gulp-replace": "^1",
     "gulp-terser": "^1",
     "gulp-typescript": "^5",
-    "gulp": "^4",
     "replace": "^1",
     "rimraf": "^2",
     "terser-folder": "^2",

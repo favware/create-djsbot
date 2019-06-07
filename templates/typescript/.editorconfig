@@ -1,3 +1,5 @@
+# This file defines standard code style for this project and gets used by editors such as VSCode, Atom and IntelliJ IDEA
+
 root = true
 
 [*]
