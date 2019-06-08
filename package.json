@@ -1,5 +1,5 @@
 {
-  "name": "@favware/create-discordbot",
+  "name": "create-discordbot",
   "version": "1.0.0",
   "description": "CLI for easily bootstrapping a DiscordJS bot with the Commando framework",
   "main": "./dist/index.js",
