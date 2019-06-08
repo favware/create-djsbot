@@ -24,11 +24,11 @@
     "lint": "tslint -p . -c ./tslint.json --format verbose --fix",
     "test": "jest",
     "start": "ts-node ./lib/index.ts",
-    "prebuild": "yarn clean && yarn lint && yarn test",
+    "prebuild": "yarn lint && yarn test",
     "build": "tsc",
     "postbuild": "yarn terser",
     "prepublishOnly": "yarn build",
-    "clean": "rimraf ./dist",
+    "clean": "rimraf ./dist ./tsconfig.tsbuildinfo",
     "terser": "terser-folder ./dist -eo ./dist -x .js"
   },
   "keywords": [

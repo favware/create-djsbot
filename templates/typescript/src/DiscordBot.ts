@@ -5,12 +5,12 @@
  * is not jumbled up with the app initiation.
  */
 
-import log from '@utils/winston';
 import { CommandoClient, SyncSQLiteProvider } from 'awesome-commando';
 import Database from 'better-sqlite3';
 import { oneLine } from 'common-tags';
 import moment from 'moment';
 import path from 'path';
+import log from './utils/winston';
 
 export default class Discordbot {
     public token: string;

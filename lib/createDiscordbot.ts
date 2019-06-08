@@ -25,27 +25,18 @@ const createDiscordbot = async (info: ICreateDiscordBotInfo): Promise<string> =>
     const copyTemplateFilesPromise = pEachSeries(files, async file => {
         return copyTemplateFiles({ file, source, dest, info });
     });
-    cliSpinner(copyTemplateFilesPromise, {
-        text: `Copying the ${template} template to ${dest}`,
-        indent: 2,
-    });
+    cliSpinner(copyTemplateFilesPromise, `Copying the ${template} template to ${dest}`);
     await copyTemplateFilesPromise;
 
     fixUpGitIgnoreFile({ dest });
 
     const initPackageManagerPromise = initPackageManager({ dest, info });
-    cliSpinner(initPackageManagerPromise, {
-        text: `Installing packages with ${manager}`,
-        indent: 2,
-    });
+    cliSpinner(initPackageManagerPromise, `Installing packages with ${manager}`);
     await initPackageManagerPromise;
 
     if (gitinit) {
         const gitInitPromise = initGitRepo({ dest, info });
-        cliSpinner(gitInitPromise, {
-            text: `Initializing git repository`,
-            indent: 2,
-        });
+        cliSpinner(gitInitPromise, `Initializing git repository`);
 
         await gitInitPromise;
     }
@@ -117,6 +108,7 @@ const fixUpGitIgnoreFile = (opts: { dest: string }) => {
             # Build Output
             dist/
             build/
+            tsconfig.tsbuildinfo
 
             # Data folders
             src/data/databases/*

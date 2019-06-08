@@ -7,11 +7,11 @@ const { RichEmbed } = require('discord.js');
 const moment = require('moment');
 
 module.exports = class UserInfoCommand extends Command {
-  /**
- * Initializing this command. You configure the command options here.
- * @param {CommandoClient} client The client that the command is for. You should never edit this!
- */
-  constructor (client) {
+ /**
+  * Initializing this command. You configure the command options here.
+  * @param {CommandoClient} client The client that the command is for. You should never edit this!
+  */
+  constructor(client) {
     super(client, {
       name: 'userinfo',
       aliases: ['user', 'uinfo'],
@@ -49,12 +49,12 @@ module.exports = class UserInfoCommand extends Command {
   /**
    * Commando requires a "run" function that is what is run when the command is called
    * @param {CommandoMessage} msg The message that this command is run from (your message)
-   * @param {GuildMember} param1 The second param is normally all the "args",
+   * @param {GuildMember} member The second param is normally all the "args",
    *                             but you can directly import just your specified args by { wrapping it in curly braces}
    *                             This is a nice shortcut to access your arguments but you have to be careful that what you
    *                             write here matches the argument keys above!
    */
-  run (msg, { member }) {
+  run(msg, { member }) {
     // Initialize a new RichEmbed
     const uinfoEmbed = new RichEmbed()
       // The author is set to the tag of the member
@@ -106,7 +106,7 @@ module.exports = class UserInfoCommand extends Command {
    * That means sentences like these that start with a capital letter but are small case for the rest of them.
    * @param {string} str The text to convert to sentence case
    */
-  transformToSentenceCase (str) {
+  transformToSentenceCase(str) {
     return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
   }
 
@@ -116,7 +116,7 @@ module.exports = class UserInfoCommand extends Command {
    * @param {string} deleteValue Value to remove from the array
    * @param {array} array The array to check
    */
-  cleanArray (deleteValue, array) {
+  cleanArray(deleteValue, array) {
     return array.filter(element => element !== deleteValue);
   }
 };

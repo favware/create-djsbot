@@ -21,3 +21,4 @@ logs/
 # Build Output
 dist/
 build/
+tsconfig.tsbuildinfo

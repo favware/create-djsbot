@@ -21,6 +21,7 @@ logs/
 # Build Output
 dist/
 build/
+tsconfig.tsbuildinfo
 
 # Data folders
 src/data/databases/*
