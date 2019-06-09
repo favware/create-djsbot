@@ -43,7 +43,7 @@
     "common-tags": "^1.8.0",
     "execa": "^1.0.0",
     "git-config-path": "^2.0.0",
-    "github-username": "^5.0.0",
+    "github-username": "^5.0.1",
     "globby": "^9.2.0",
     "handlebars": "^4.1.2",
     "make-dir": "^3.0.0",
