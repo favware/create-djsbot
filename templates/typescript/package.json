@@ -32,7 +32,6 @@
     "prepublishOnly": "yarn build"
   },
   "dependencies": {
-    "@discordjs/uws": "^11.149.1",
     "@favware/ytdl-prismplayer": "^1.0.0",
     "awesome-commando": "^3.0.8",
     "awesome-djs": "^13.0.15",

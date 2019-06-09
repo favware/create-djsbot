@@ -15,7 +15,6 @@
     "serve": "pm2 start pm2.ecosystem.yml"
   },
   "dependencies": {
-    "@discordjs/uws": "^10",
     "@favware/ytdl-prismplayer": "^1",
     "chalk": "^2.4.2",
     "common-tags": "^1",
