@@ -21,7 +21,16 @@ commands:
           name: Linting
           command: yarn lint
       - run:
-          name: Testing
+          name: Create build
+          command: yarn build
+      - run:
+          name: Create JS template
+          command: node ./dist/index.js --interactive=false --name=javascript_template --description=javascript_bot --author=circleci --license=MIT --repo='https://github.com/favna/jsbot' --gitinit=no --manager=yarn --template=javascript --prefix=. --ownerid=1234 --token=12345
+      - run:
+          name: Create TS template
+          command: node ./dist/index.js --interactive=false --name=typescript_template --description=typescript_bot --author=circleci --license=MIT --repo='https://github.com/favna/tsbot' --gitinit=no --manager=yarn --template=typescript --prefix=. --ownerid=1234 --token=12345
+      - run:
+          name: Test outputs
           command: yarn test
 
 # List of jobs
