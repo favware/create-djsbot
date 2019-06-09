@@ -1,6 +1,6 @@
 {
   "name": "create-djsbot",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CLI for easily bootstrapping a DiscordJS bot with the Commando framework",
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
