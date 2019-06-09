@@ -3,7 +3,7 @@
 import chalk from 'chalk';
 import { oneLine, stripIndent } from 'common-tags';
 import yargsInteractive from 'yargs-interactive';
-import createDiscordbot from './createDiscordbot';
+import createDJSBot from './createDJSBot';
 import getDefaultOptions from './getDefaultOptions';
 import { YargOptions, YargResult } from './typings';
 
@@ -68,12 +68,12 @@ export const setupBoilerplate = () => {
 
         yargsInteractive()
             .usage(stripIndent`
-                ${chalk.yellow('Create Discordbot - Easily bootstrap your bot!')}
+                ${chalk.yellow('Create DJSBot - Easily bootstrap your bot!')}
 
                 ${chalk.cyan('Usage:')}
-                    ${chalk.green('create-discordbot')}
-                    ${chalk.green('create-discordbot')} --help
-                    ${chalk.green('create-discordbot')} --name mybot
+                    ${chalk.green('create-djsbot')}
+                    ${chalk.green('create-djsbot')} --help
+                    ${chalk.green('create-djsbot')} --name mybot
             `)
             .interactive(yargOptions)
             .then(async (result: YargResult) => {
@@ -93,7 +93,7 @@ export const setupBoilerplate = () => {
                     if (!result.token) result.token = defaults.token;
                     if (!hasOwnProperty<typeof result>(result, 'gitinit')) result.gitinit = true;
 
-                    await createDiscordbot(result);
+                    await createDJSBot(result);
                 } catch (err) {
                     // tslint:disable:no-console
                     if (/(?:no_name)/i.test(err.toString())) {

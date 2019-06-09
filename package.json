@@ -1,21 +1,21 @@
 {
-  "name": "create-discordbot",
+  "name": "create-djsbot",
   "version": "1.0.0",
   "description": "CLI for easily bootstrapping a DiscordJS bot with the Commando framework",
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
   "bin": {
-    "create-discordbot": "./dist/index.js"
+    "create-djsbot": "./dist/index.js"
   },
   "author": "@favware",
   "license": "MIT",
-  "homepage": "https://favware.tech/creatediscordbot",
+  "homepage": "https://favware.tech/createdjsbot",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/favware/create-discordbot.git"
+    "url": "git+https://github.com/favware/create-djsbot.git"
   },
   "bugs": {
-    "url": "https://github.com/favware/create-discordbot/issues"
+    "url": "https://github.com/favware/create-djsbot/issues"
   },
   "engines": {
     "node": ">=8.0.0"

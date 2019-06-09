@@ -13,7 +13,7 @@ export const fetchDefaults = async (name: string, author: string): Promise<Defau
         license: 'MIT',
         manager: 'npm',
         template: 'javascript',
-        description: 'Discord bot bootstrapped with create-discordbot',
+        description: 'Discord bot bootstrapped with create-djsbot',
         repo: '',
         prefix: '!',
         ownerid: '',

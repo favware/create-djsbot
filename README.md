@@ -1,27 +1,27 @@
 <div align="center">
 <p>
-<a href="https://favware.tech/create-discordbot">
-<img src="https://storage.googleapis.com/data-sunlight-146313.appspot.com/website-project-icons/create-discordbot.png" height="200" alt="logo">
+<a href="https://favware.tech/create-djsbot">
+<img src="https://storage.googleapis.com/data-sunlight-146313.appspot.com/website-project-icons/create-djsbot.png" height="200" alt="logo">
 </a>
 </p>
 
 <p>
-<h1> @Favware/Create-Discordbot </h1>
+<h1> Create DJS Bot </h1>
 <h3> Bootstrapping CLI tool for quickly setting up a Discord bot project </h3>
 </p>
 
 <p>
-<a href="https://github.com/favware/create-discordbot/blob/master/LICENSE.md"><img src="https://img.shields.io/github/license/favware/create-discordbot.svg?style=flat-square" alt="License"></a><!--
---><a href="https://www.npmjs.com/package/@favware/create-discordbot"><img src="https://img.shields.io/node/v/@favware/create-discordbot.svg?style=flat-square" alt="Node Version"></a><!--
---><a href="https://circleci.com/gh/favware/create-discordbot/tree/master"><img src="https://img.shields.io/circleci/project/github/favware/create-discordbot/master.svg?style=flat-square" alt="Build Status" title="Build Status" /></a>
+<a href="https://github.com/favware/create-djsbot/blob/master/LICENSE.md"><img src="https://img.shields.io/github/license/favware/create-djsbot.svg?style=flat-square" alt="License"></a><!--
+--><a href="https://www.npmjs.com/package/@favware/create-djsbot"><img src="https://img.shields.io/node/v/@favware/create-djsbot.svg?style=flat-square" alt="Node Version"></a><!--
+--><a href="https://circleci.com/gh/favware/create-djsbot/tree/master"><img src="https://img.shields.io/circleci/project/github/favware/create-djsbot/master.svg?style=flat-square" alt="Build Status" title="Build Status" /></a>
 </p>
 
 <p>
-<a href="https://www.npmjs.com/package/@favware/create-discordbot"><img src="https://img.shields.io/bundlephobia/min/@favware/create-discordbot.svg?style=popout-square" alt="NPM bundle size (minified)" title="NPM bundle size (minified)" /></a><!--
---><a href="https://www.npmjs.com/package/@favware/create-discordbot"><img src="https://img.shields.io/bundlephobia/minzip/@favware/create-discordbot.svg?style=flat-square" alt="NPM bundle size (minified + gzip)" title="NPM bundle size (minified + gzip)" /></a><!--
---><a href="https://www.npmjs.com/package/@favware/create-discordbot"><img src="https://img.shields.io/npm/v/@favware/create-discordbot.svg?style=flat-square" alt="NPM Version" title="NPM Version" /></a><!--
---><a href="https://www.npmjs.com/package/@favware/create-discordbot"><img src="https://img.shields.io/npm/dw/@favware/create-discordbot.svg?style=flat-square" alt="NPM Weekly Downloads" title="NPM Weekly Downloads" /></a><!--
---><a href="https://www.npmjs.com/package/@favware/create-discordbot"><img src="https://img.shields.io/npm/dt/@favware/create-discordbot.svg?style=flat-square" alt="NPM Total Downloads" title="NPM Total Downloads" /></a>
+<a href="https://www.npmjs.com/package/@favware/create-djsbot"><img src="https://img.shields.io/bundlephobia/min/@favware/create-djsbot.svg?style=popout-square" alt="NPM bundle size (minified)" title="NPM bundle size (minified)" /></a><!--
+--><a href="https://www.npmjs.com/package/@favware/create-djsbot"><img src="https://img.shields.io/bundlephobia/minzip/@favware/create-djsbot.svg?style=flat-square" alt="NPM bundle size (minified + gzip)" title="NPM bundle size (minified + gzip)" /></a><!--
+--><a href="https://www.npmjs.com/package/@favware/create-djsbot"><img src="https://img.shields.io/npm/v/@favware/create-djsbot.svg?style=flat-square" alt="NPM Version" title="NPM Version" /></a><!--
+--><a href="https://www.npmjs.com/package/@favware/create-djsbot"><img src="https://img.shields.io/npm/dw/@favware/create-djsbot.svg?style=flat-square" alt="NPM Weekly Downloads" title="NPM Weekly Downloads" /></a><!--
+--><a href="https://www.npmjs.com/package/@favware/create-djsbot"><img src="https://img.shields.io/npm/dt/@favware/create-djsbot.svg?style=flat-square" alt="NPM Total Downloads" title="NPM Total Downloads" /></a>
 </p>
 </div>
 
@@ -32,19 +32,19 @@
 ## Using Yarn
 
 ```sh
-yarn create @favware/discordbot mybot
+yarn create djsbot
 # or for reusability
-yarn global add @favware/create-discordbot
-create-discordbot mybot
+yarn global add create-djsbot
+create-djsbot mybot
 ```
 
 ## Using NPM
 
 ```sh
-npx @favware/create-discordbot mybot
+npx create-djsbot mybot
 # or for reusability
-npm install --global @favware/create-discordbot
-create-discordbot mybot
+npm install --global create-djsbot
+create-djsbot mybot
 ```
 
 ### Answer some basic prompts about your module, and then the CLI will perform the following steps:
@@ -66,12 +66,12 @@ create-discordbot mybot
 ## Usage
 
 ```sh
-Create Discordbot - Easily bootstrap your bot!
+Create DJSBot - Easily bootstrap your bot!
 
 Usage:
-    create-discordbot
-    create-discordbot --help
-    create-discordbot --name mybot
+    create-djsbot
+    create-djsbot --help
+    create-djsbot --name mybot
 
 Options:
   --help         Show help                                             [boolean]

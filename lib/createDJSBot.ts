@@ -7,9 +7,9 @@ import mkdir from 'make-dir';
 import { promise as cliSpinner } from 'ora';
 import pEachSeries from 'p-each-series';
 import path from 'path';
-import { ICreateDiscordBotInfo } from './typings';
+import { ICreateDJSBotInfo } from './typings';
 
-const createDiscordbot = async (info: ICreateDiscordBotInfo): Promise<string> => {
+const createDJSBot = async (info: ICreateDJSBotInfo): Promise<string> => {
     const { manager, template, name, gitinit } = info;
 
     const nameParts = name.split('/');
@@ -44,7 +44,7 @@ const createDiscordbot = async (info: ICreateDiscordBotInfo): Promise<string> =>
     return dest;
 };
 
-const copyTemplateFiles = async (opts: { file: string; source: string; dest: string; info: ICreateDiscordBotInfo }): Promise<string> => {
+const copyTemplateFiles = async (opts: { file: string; source: string; dest: string; info: ICreateDJSBotInfo }): Promise<string> => {
     const { file, source, dest, info } = opts;
 
     const fileRelativePath = path.relative(source, file);
@@ -64,7 +64,7 @@ const copyTemplateFiles = async (opts: { file: string; source: string; dest: str
     return fileRelativePath;
 };
 
-const initPackageManager = async (opts: { dest: string; info: ICreateDiscordBotInfo }) => {
+const initPackageManager = async (opts: { dest: string; info: ICreateDJSBotInfo }) => {
     const { dest, info } = opts;
 
     const commands = [
@@ -118,10 +118,10 @@ const fixUpGitIgnoreFile = (opts: { dest: string }) => {
     `, 'utf8');
 };
 
-const initGitRepo = async (opts: { dest: string, info: ICreateDiscordBotInfo }) => {
+const initGitRepo = async (opts: { dest: string, info: ICreateDJSBotInfo }) => {
     const { dest, info } = opts;
     const cmd = `git init && git add . && git commit -sam "Initialized ${info.shortName}@1.0.0 🎉"`;
     return execa.shell(cmd, { cwd: dest });
 };
 
-export default createDiscordbot;
+export default createDJSBot;

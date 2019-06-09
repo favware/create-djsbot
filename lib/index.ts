@@ -1,8 +1,8 @@
-import createDiscordBot from './cli';
+import createDJSBot from './cli';
 
 export * from './typings';
-export * from './createDiscordbot';
+export * from './createDJSBot';
 export * from './getDefaultOptions';
 export * from './cli';
 
-createDiscordBot();
+createDJSBot();

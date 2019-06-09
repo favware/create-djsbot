@@ -26,7 +26,7 @@ export type YargResult = {
     token: string;
 };
 
-export interface ICreateDiscordBotInfo extends YargResult {
+export interface ICreateDJSBotInfo extends YargResult {
     shortName?: string;
     botDestination?: string;
 }
