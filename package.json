@@ -27,7 +27,7 @@
     "prebuild": "yarn lint",
     "build": "tsc",
     "postbuild": "yarn terser",
-    "prepublishOnly": "yarn build",
+    "prepublishOnly": "yarn clean && yarn build",
     "clean": "rimraf ./dist ./tsconfig.tsbuildinfo",
     "terser": "terser-folder ./dist -eo ./dist -x .js"
   },
