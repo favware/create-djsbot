@@ -22,7 +22,7 @@
   },
   "scripts": {
     "lint": "tslint -p . -c ./tslint.json --format verbose --fix",
-    "test": "jest",
+    "test:ci": "jest",
     "start": "ts-node ./lib/index.ts",
     "prebuild": "yarn lint",
     "build": "tsc",

@@ -27,7 +27,7 @@
     "resolveJsonModule": true,                  /* Include modules import with .json extension, allows you to do something like "import data from data.json"*/
     "allowJs": true,                            /* Allows files with the .js extension so you can migrate more easily */
     "checkJs": true,                            /* Attempt to typecheck your .js files */
-    "incremental": true                         /* Speeds up incremental builds by saving some information of the previous build */
+    "incremental": false                        /* OPTIONAL: Speeds up incremental builds by saving some information of the previous build */
   },
   "include": ["src/**/*.ts"],                   /* Files that should be included in the compile process */
   "exclude": ["node_modules", "dist"]           /* Files that should be excluded from the compile process */
