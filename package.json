@@ -26,10 +26,8 @@
     "start": "ts-node ./lib/index.ts",
     "prebuild": "yarn lint",
     "build": "tsc",
-    "postbuild": "yarn terser",
     "prepublishOnly": "yarn clean && yarn build",
-    "clean": "rimraf ./dist ./tsconfig.tsbuildinfo",
-    "terser": "terser-folder ./dist -eo ./dist -x .js"
+    "clean": "rimraf ./dist ./tsconfig.tsbuildinfo"
   },
   "keywords": [
     "discord",
@@ -68,7 +66,6 @@
     "jest": "^24.8.0",
     "jsonfile": "^5.0.0",
     "rimraf": "^2.6.3",
-    "terser-folder": "^2.0.0",
     "ts-jest": "^24.0.2",
     "ts-node": "^8.2.0",
     "tslint": "^5.17.0",

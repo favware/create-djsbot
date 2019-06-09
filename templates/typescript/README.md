@@ -41,7 +41,7 @@ A few notes should be shared about the TypeScript template that are important to
 
 6. Therefore always compile your bot to JavaScript using `npm run build` or `yarn build`
 
-7. And do not remove anything from the `build`, `prebuild`, `postbuild`, `copyfiles`, `replace` or `terser` scripts. Doing so will either cause your bot to not build properly at all, or cause inefficiencies in the long term. Adding to it is perfectly fine however!
+7. And do not remove anything from the `build`, `prebuild`, `postbuild`, `copyfiles` or `replace` scripts. Doing so will either cause your bot to not build properly at all, or cause inefficiencies in the long term. Adding to it is perfectly fine however!
 
 8. The TypeScript config allows you to use aliases for easier accessing the `commands` and `utils` folders. For example if you need to log something you can `import log from '@utils/winston'` (which imports the `winston.ts` file at `src/utils/winston.ts`, no matter how many subfolders deep you are) then use this as `log.info()`.
 

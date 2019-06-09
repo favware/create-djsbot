@@ -19,7 +19,6 @@
  */
 
 import gulp from 'gulp';
-import terser from 'gulp-terser';
 import typescript from 'gulp-typescript';
 import { argv } from 'yargs';
 
@@ -57,8 +56,6 @@ const compileSingleToJavaScript = (done: () => void) => {
             .pipe(tsProject())
             // Fetches the JavaScript
             .js
-            // Pipes the JavaScript  file to Terser
-            .pipe(terser({ compress: { ecma: 6, drop_console: true } }))
             // Pipes the file to the output
             .pipe(gulp.dest(targetFolder));
     }
