@@ -12,6 +12,7 @@ logs/
 .env.development.local
 .env.test.local
 .env.production.local
+.tgz
 
 # IDE settings
 .idea/
