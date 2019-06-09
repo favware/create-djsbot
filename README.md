@@ -12,16 +12,16 @@
 
 <p>
 <a href="https://github.com/favware/create-djsbot/blob/master/LICENSE.md"><img src="https://img.shields.io/github/license/favware/create-djsbot.svg?style=flat-square" alt="License"></a><!--
---><a href="https://www.npmjs.com/package/@favware/create-djsbot"><img src="https://img.shields.io/node/v/@favware/create-djsbot.svg?style=flat-square" alt="Node Version"></a><!--
+--><a href="https://www.npmjs.com/package/create-djsbot"><img src="https://img.shields.io/node/v/create-djsbot.svg?style=flat-square" alt="Node Version"></a><!--
 --><a href="https://circleci.com/gh/favware/create-djsbot/tree/master"><img src="https://img.shields.io/circleci/project/github/favware/create-djsbot/master.svg?style=flat-square" alt="Build Status" title="Build Status" /></a>
 </p>
 
 <p>
-<a href="https://www.npmjs.com/package/@favware/create-djsbot"><img src="https://img.shields.io/bundlephobia/min/@favware/create-djsbot.svg?style=popout-square" alt="NPM bundle size (minified)" title="NPM bundle size (minified)" /></a><!--
---><a href="https://www.npmjs.com/package/@favware/create-djsbot"><img src="https://img.shields.io/bundlephobia/minzip/@favware/create-djsbot.svg?style=flat-square" alt="NPM bundle size (minified + gzip)" title="NPM bundle size (minified + gzip)" /></a><!--
---><a href="https://www.npmjs.com/package/@favware/create-djsbot"><img src="https://img.shields.io/npm/v/@favware/create-djsbot.svg?style=flat-square" alt="NPM Version" title="NPM Version" /></a><!--
---><a href="https://www.npmjs.com/package/@favware/create-djsbot"><img src="https://img.shields.io/npm/dw/@favware/create-djsbot.svg?style=flat-square" alt="NPM Weekly Downloads" title="NPM Weekly Downloads" /></a><!--
---><a href="https://www.npmjs.com/package/@favware/create-djsbot"><img src="https://img.shields.io/npm/dt/@favware/create-djsbot.svg?style=flat-square" alt="NPM Total Downloads" title="NPM Total Downloads" /></a>
+<a href="https://www.npmjs.com/package//create-djsbot"><img src="https://img.shields.io/bundlephobia/min//create-djsbot.svg?style=popout-square" alt="NPM bundle size (minified)" title="NPM bundle size (minified)" /></a><!--
+--><a href="https://www.npmjs.com/package/create-djsbot"><img src="https://img.shields.io/bundlephobia/minzip/create-djsbot.svg?style=flat-square" alt="NPM bundle size (minified + gzip)" title="NPM bundle size (minified + gzip)" /></a><!--
+--><a href="https://www.npmjs.com/package/create-djsbot"><img src="https://img.shields.io/npm/v/create-djsbot.svg?style=flat-square" alt="NPM Version" title="NPM Version" /></a><!--
+--><a href="https://www.npmjs.com/package/create-djsbot"><img src="https://img.shields.io/npm/dw/create-djsbot.svg?style=flat-square" alt="NPM Weekly Downloads" title="NPM Weekly Downloads" /></a><!--
+--><a href="https://www.npmjs.com/package/create-djsbot"><img src="https://img.shields.io/npm/dt/create-djsbot.svg?style=flat-square" alt="NPM Total Downloads" title="NPM Total Downloads" /></a>
 </p>
 </div>
 
