@@ -21,14 +21,14 @@
     "discord.js": "^11.5.1",
     "discord.js-commando": "discordjs/commando#djs-v11",
     "dotenv": "^8",
-    "libsodium-wrappers": "^0.7.4",
+    "libsodium-wrappers": "^0.7.5",
     "moment": "^2.24.0",
-    "moment-duration-format": "^2.2.2",
+    "moment-duration-format": "^2.3.2",
     "node-opus": "^0.3.2",
     "prism-media": "^1",
     "sqlite": "^3.0.3",
     "winston": "^3.2.1",
-    "zlib-sync": "^0.1.4"
+    "zlib-sync": "^0.1.5"
   },
   "devDependencies": {
     "@types/better-sqlite3": "~5.2",
