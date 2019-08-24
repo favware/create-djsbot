@@ -15,7 +15,7 @@
     "serve": "pm2 start pm2.ecosystem.yml"
   },
   "dependencies": {
-    "@favware/ytdl-prismplayer": "^1",
+    "@favware/ytdl-prismplayer": "^2.2.0",
     "chalk": "^2.4.2",
     "common-tags": "^1",
     "discord.js": "^11.5.1",
@@ -31,18 +31,18 @@
     "zlib-sync": "^0.1.5"
   },
   "devDependencies": {
-    "@types/better-sqlite3": "~5.2",
+    "@types/better-sqlite3": "~5.4.0",
     "@types/common-tags": "~1.8",
     "@types/dotenv": "~6.1",
     "@types/libsodium-wrappers": "~0.7",
-    "@types/node": "~12.0",
+    "@types/node": "~12.7.2",
     "@types/ws": "~6.0",
     "concurrently": "^4",
     "cross-env": "^5",
-    "eslint": "^5",
-    "eslint-config-standard": "^12",
+    "eslint": "^6.2.2",
+    "eslint-config-standard": "^14.0.1",
     "eslint-plugin-import": "^2",
-    "eslint-plugin-node": "^7",
+    "eslint-plugin-node": "^9.1.0",
     "eslint-plugin-promise": "^4",
     "eslint-plugin-standard": "^4"
   }
