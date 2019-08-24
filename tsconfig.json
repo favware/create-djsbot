@@ -16,8 +16,7 @@
     "removeComments": true,
     "strict": true,
     "declaration": true,
-    "importHelpers": true,
-    "incremental": true
+    "importHelpers": true
   },
   "include": ["lib/*.ts"],
   "exclude": ["node_modules", "dist"]

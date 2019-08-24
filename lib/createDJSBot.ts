@@ -75,7 +75,7 @@ const initPackageManager = async (opts: { dest: string; info: ICreateDJSBotInfo 
     ];
 
     return pEachSeries(commands, async ({ cmd, cwd }) => {
-        return execa.shell(cmd, { cwd });
+        return execa.command(cmd, { cwd });
     });
 };
 
@@ -121,7 +121,7 @@ const fixUpGitIgnoreFile = (opts: { dest: string }) => {
 const initGitRepo = async (opts: { dest: string, info: ICreateDJSBotInfo }) => {
     const { dest, info } = opts;
     const cmd = `git init && git add . && git commit -sam "Initialized ${info.shortName}@1.0.0 🎉"`;
-    return execa.shell(cmd, { cwd: dest });
+    return execa.command(cmd, { cwd: dest });
 };
 
 export default createDJSBot;
