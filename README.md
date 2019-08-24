@@ -27,6 +27,8 @@
 
 ---
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/favware/create-djsbot.svg)](https://greenkeeper.io/)
+
 # Install
 
 ## Using Yarn
