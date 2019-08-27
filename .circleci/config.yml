@@ -61,22 +61,28 @@ commands:
         name: Build code
         command: yarn build
     - <<: *save_dist
-  test_ts:
+  template_ts:
     description: Tests the library with the TypeScript template
     steps:
     - *checkout
-    - <<: *restore_dist
+    - <<: [*restore_dist, *restore_yarn]
     - run:
         name: Create TS Template
         command: node ./dist/index.js --interactive=false --name=typescript_template --description=typescript_bot --author=circleci --license=MIT --repo='https://github.com/favna/tsbot' --gitinit=no --manager=yarn --template=typescript --prefix=. --ownerid=1234 --token=12345
-  test_js:
+    - run:
+        name: Verify TS Template
+        command: yarn test:ci ts_template
+  template_js:
     description: Tests the library with the JavaScript template
     steps:
     - *checkout
-    - <<: *restore_dist
+    - <<: [*restore_dist, *restore_yarn]
     - run:
         name: Create JS Template
         command: node ./dist/index.js --interactive=false --name=javascript_template --description=javascript_bot --author=circleci --license=MIT --repo='https://github.com/favna/jsbot' --gitinit=no --manager=yarn --template=javascript --prefix=. --ownerid=1234 --token=12345
+    - run:
+        name: Verify JS Template
+        command: yarn test:ci js_template
 
 # List of jobs
 jobs:
@@ -92,30 +98,30 @@ jobs:
     <<: *job_node_12
     steps:
       - build-and-test
-  test_ts-node-10:
+  template_ts-node-10:
     <<: *job_node_10
     steps:
-      - test_ts
-  test_ts-node-11:
+      - template_ts
+  template_ts-node-11:
     <<: *job_node_11
     steps:
-      - test_ts
-  test_ts-node-12:
+      - template_ts
+  template_ts-node-12:
     <<: *job_node_12
     steps:
-      - test_ts
-  test_js-node-10:
+      - template_ts
+  template_js-node-10:
     <<: *job_node_10
     steps:
-      - test_js
-  test_js-node-11:
+      - template_js
+  template_js-node-11:
     <<: *job_node_11
     steps:
-      - test_js
-  test_js-node-12:
+      - template_js
+  template_js-node-12:
     <<: *job_node_12
     steps:
-      - test_js
+      - template_js
 
 workflows:
   version: 2
@@ -124,21 +130,21 @@ workflows:
       - build-and-test-node-10
       - build-and-test-node-11
       - build-and-test-node-12
-      - test_ts-node-10:
+      - template_ts-node-10:
           requires:
             - build-and-test-node-10
-      - test_ts-node-11:
+      - template_ts-node-11:
           requires:
             - build-and-test-node-11
-      - test_ts-node-12:
+      - template_ts-node-12:
           requires:
             - build-and-test-node-12
-      - test_js-node-10:
+      - template_js-node-10:
           requires:
             - build-and-test-node-10
-      - test_js-node-11:
+      - template_js-node-11:
           requires:
             - build-and-test-node-11
-      - test_js-node-12:
+      - template_js-node-12:
           requires:
             - build-and-test-node-12
