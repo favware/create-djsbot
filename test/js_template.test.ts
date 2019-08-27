@@ -2,7 +2,7 @@ import fs from 'fs';
 import { readFileSync } from 'jsonfile';
 import path from 'path';
 
-describe('TypeScript Template', () => {
+describe('JavaScript Template', () => {
   const jsDir = path.join(__dirname, '..', 'javascript_template');
 
   test('Verify that handlebars parsed the package.json', () => {
