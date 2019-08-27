@@ -15,8 +15,7 @@
     "noUnusedLocals": true,
     "removeComments": true,
     "strict": true,
-    "declaration": true,
-    "importHelpers": true
+    "declaration": true
   },
   "include": ["lib/*.ts"],
   "exclude": ["node_modules", "dist"]
