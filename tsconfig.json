@@ -17,6 +17,5 @@
     "strict": true,
     "declaration": true
   },
-  "include": ["lib/*.ts"],
-  "exclude": ["node_modules", "dist"]
+  "include": ["lib"]
 }
