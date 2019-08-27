@@ -9,6 +9,20 @@ import { YargOptions, YargResult } from './typings';
 
 const hasOwnProperty = <O extends {}>(obj: O, prop: keyof O) => prop in obj;
 
+const parseBooleanLikeInput = (input: unknown) => {
+  switch (input) {
+    case 'no':
+    case 'false':
+    case 'off':
+    case '0':
+    case 0:
+    case false:
+      return false;
+    default:
+      return true;
+  }
+};
+
 export const setupBoilerplate = async () => {
   try {
     const yargOptions: YargOptions = {
@@ -87,6 +101,7 @@ export const setupBoilerplate = async () => {
     if (!result.ownerid) result.ownerid = defaults.ownerid;
     if (!result.token) result.token = defaults.token;
     if (!hasOwnProperty<typeof result>(result, 'gitinit')) result.gitinit = true;
+    result.gitinit = parseBooleanLikeInput(result.gitinit);
 
     await createDJSBot(result);
   } catch (err) {
