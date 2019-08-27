@@ -1,33 +1,33 @@
 <div align="center">
-<p>
-<a href="https://favware.tech/create-djsbot">
-<img src="https://storage.googleapis.com/data-sunlight-146313.appspot.com/website-project-icons/create-djsbot.png" height="200" alt="logo">
-</a>
-</p>
+  <p>
+  <a href="https://favware.tech"><img src="https://storage.googleapis.com/data-sunlight-146313.appspot.com/website-project-icons/create-djsbot.png" height="200" alt="logo"/></a>
+  </p>
 
-<p>
-<h1> Create DJS Bot </h1>
+  <p>
+<h1> Create DJS Bort </h1>
 <h3> Bootstrapping CLI tool for quickly setting up a Discord bot project </h3>
-</p>
+  </p>
 
-<p>
-<a href="https://github.com/favware/create-djsbot/blob/master/LICENSE.md"><img src="https://img.shields.io/github/license/favware/create-djsbot.svg?style=flat-square" alt="License"></a><!--
---><a href="https://www.npmjs.com/package/create-djsbot"><img src="https://img.shields.io/node/v/create-djsbot.svg?style=flat-square" alt="Node Version"></a><!--
---><a href="https://circleci.com/gh/favware/create-djsbot/tree/master"><img src="https://img.shields.io/circleci/project/github/favware/create-djsbot/master.svg?style=flat-square" alt="Build Status" title="Build Status" /></a>
-</p>
-
-<p>
-<a href="https://www.npmjs.com/package//create-djsbot"><img src="https://img.shields.io/bundlephobia/min//create-djsbot.svg?style=popout-square" alt="NPM bundle size (minified)" title="NPM bundle size (minified)" /></a><!--
---><a href="https://www.npmjs.com/package/create-djsbot"><img src="https://img.shields.io/bundlephobia/minzip/create-djsbot.svg?style=flat-square" alt="NPM bundle size (minified + gzip)" title="NPM bundle size (minified + gzip)" /></a><!--
---><a href="https://www.npmjs.com/package/create-djsbot"><img src="https://img.shields.io/npm/v/create-djsbot.svg?style=flat-square" alt="NPM Version" title="NPM Version" /></a><!--
---><a href="https://www.npmjs.com/package/create-djsbot"><img src="https://img.shields.io/npm/dw/create-djsbot.svg?style=flat-square" alt="NPM Weekly Downloads" title="NPM Weekly Downloads" /></a><!--
---><a href="https://www.npmjs.com/package/create-djsbot"><img src="https://img.shields.io/npm/dt/create-djsbot.svg?style=flat-square" alt="NPM Total Downloads" title="NPM Total Downloads" /></a>
-</p>
 </div>
 
 ---
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/favware/create-djsbot.svg)](https://greenkeeper.io/)
+**Project Status**
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/favware/create-djsbot.svg?style=flat-square)](https://greenkeeper.io/)
+[![GitHub](https://img.shields.io/github/license/favware/create-djsbot?logo=github&style=flat-square)](https://github.com/favware/create-djsbot/blob/master/LICENSE.md)
+[![CircleCI](https://img.shields.io/circleci/build/github/favware/create-djsbot?logo=circleci&style=flat-square)](https://circleci.com/gh/favware/create-djsbot/tree/master)
+
+**NPM Versions**
+
+[![npm](https://img.shields.io/npm/v/create-djsbot?color=crimson&label=create-djsbot%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/create-djsbot)
+
+**Social Media and Donations**
+
+[![Join Discord server](https://img.shields.io/discord/512303595966824458?color=697EC4&label=Join%20Discord%20Server&logo=discord&logoColor=FDFEFE&style=flat-square)](https://favware.tech/redirect/server)
+[![Twitter Follow](https://img.shields.io/twitter/follow/favna_?label=Follow%20@Favna_&logo=twitter&colorB=1DA1F2&style=flat-square)](https://twitter.com/Favna_/follow)
+[![Patreon Donate](https://img.shields.io/badge/patreon-donate-brightgreen.svg?label=Donate%20with%20Patreon&logo=patreon&colorB=F96854&style=flat-square&link=https://www.patreon.com/bePatron?u=9336537)](https://www.patreon.com/bePatron?u=9336537)
+[![PayPal Donate](https://img.shields.io/badge/paypal-donate-brightgreen.svg?label=Donate%20with%20Paypal&logo=paypal&colorB=00457C&style=flat-square&link=https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=XMAYCF9SDHZ34)](https://www.patreon.com/bePatron?u=9336537)
 
 # Install
 
@@ -79,15 +79,15 @@ Options:
   --help         Show help                                             [boolean]
   --version      Show version number                                   [boolean]
   --interactive                                                        [default: true]
-  --name         What is the name of your bot project?                 
-  --description  What is the description for this bot?                 
-  --author       Who is the author of the bot? (GitHub username)       
+  --name         What is the name of your bot project?
+  --description  What is the description for this bot?
+  --author       Who is the author of the bot? (GitHub username)
   --license      What license do you want the bot to have?             [choices: "MIT", "GPL-3.0-or-later", "Apache-2.0", "Unlicense", "MPL-2.0"]
   --repo         Do you have an URL for the Git repository for the bot?
-  --gitinit      Should a the repo be initialized with "git init"?     
+  --gitinit      Should a the repo be initialized with "git init"?
   --manager      Do you want to use Yarn or NPM?                       [choices: "npm", "yarn"]
   --template     Do you want to use JavaScript or TypeScript?          [choices: "javascript", "typescript"]
-  --prefix       What is the bot prefix you want to set as default?    
+  --prefix       What is the bot prefix you want to set as default?
   --ownerid      What is your Discord userID that will be registered as the bot owner?
   --token        And lastly, do you already have a token the bot will use?
   ```
@@ -109,7 +109,7 @@ A few notes should be shared about the TypeScript template that are important to
       -  Install build-essential: `sudo apt-get install -y build-essential`
    - Other OS / distro's:
       - Please google how to install build essentials such as GCC and Make
- 
+
 
 3. In TypeScript you should to use ES6 imports/exports rather than CommonJS `module.exports` and `require` as it's far more efficient, adds a lot of cool features such as default exports, named exports and advanced imports and it's far easier to write and remember.
 
