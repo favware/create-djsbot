@@ -3,9 +3,6 @@ version: 2.1
 aliases:
   - &checkout
     checkout
-  - &store_artifacts
-    store_artifacts:
-      path: coverage
 
 job_node_10: &job_node_10
   docker:
@@ -23,6 +20,13 @@ run_yarn: &run_yarn
   name: Install yarn packages
   command: yarn install --frozen-lockfile
 
+save_dist: &save_dist
+  save_cache:
+    name: Save dist folder
+    key: dist-latest
+    paths:
+      - dist
+
 save_yarn: &save_yarn
   save_cache:
     name: Save Yarn Package Cache
@@ -31,14 +35,19 @@ save_yarn: &save_yarn
       - ~/.cache/yarn
       - node_modules
 
+restore_dist: &restore_dist
+  restore_cache:
+    name: Restore dist folder
+    key: dist-latest
+
 restore_yarn: &restore_yarn
   restore_cache:
     name: Restore Yarn Package Cache
     key: yarn-packages-{{ .Branch }}-{{ checksum "yarn.lock" }}
 
 commands:
-  nodejs:
-    description: Primary flow
+  build-and-test:
+    description: Sets up node modules, lints the code and creates a build
     steps:
     - *checkout
     - <<: *restore_yarn
@@ -46,40 +55,90 @@ commands:
         <<: *run_yarn
     - <<: *save_yarn
     - run:
-        name: Linting
+        name: Lint code
         command: yarn lint
     - run:
-        name: Create build
+        name: Build code
         command: yarn build
+    - <<: *save_dist
+  test_ts:
+    description: Tests the library with the TypeScript template
+    steps:
+    - *checkout
+    - <<: *restore_dist
     - run:
-        name: Create JS template
-        command: node ./dist/index.js --interactive=false --name=javascript_template --description=javascript_bot --author=circleci --license=MIT --repo='https://github.com/favna/jsbot' --gitinit=no --manager=yarn --template=javascript --prefix=. --ownerid=1234 --token=12345
-    - run:
-        name: Create TS template
+        name: Create TS Template
         command: node ./dist/index.js --interactive=false --name=typescript_template --description=typescript_bot --author=circleci --license=MIT --repo='https://github.com/favna/tsbot' --gitinit=no --manager=yarn --template=typescript --prefix=. --ownerid=1234 --token=12345
+  test_js:
+    description: Tests the library with the JavaScript template
+    steps:
+    - *checkout
+    - <<: *restore_dist
     - run:
-        name: Test outputs
-        command: yarn test:ci
+        name: Create JS Template
+        command: node ./dist/index.js --interactive=false --name=javascript_template --description=javascript_bot --author=circleci --license=MIT --repo='https://github.com/favna/jsbot' --gitinit=no --manager=yarn --template=javascript --prefix=. --ownerid=1234 --token=12345
 
 # List of jobs
 jobs:
-  node-v10:
+  build-and-test-node-10:
     <<: *job_node_10
     steps:
-      - nodejs
-  node-v11:
+      - build-and-test
+  build-and-test-node-11:
     <<: *job_node_11
     steps:
-      - nodejs
-  node-v12:
+      - build-and-test
+  build-and-test-node-12:
     <<: *job_node_12
     steps:
-      - nodejs
+      - build-and-test
+  test_ts-node-10:
+    <<: *job_node_10
+    steps:
+      - test_ts
+  test_ts-node-11:
+    <<: *job_node_11
+    steps:
+      - test_ts
+  test_ts-node-12:
+    <<: *job_node_12
+    steps:
+      - test_ts
+  test_js-node-10:
+    <<: *job_node_10
+    steps:
+      - test_js
+  test_js-node-11:
+    <<: *job_node_11
+    steps:
+      - test_js
+  test_js-node-12:
+    <<: *job_node_12
+    steps:
+      - test_js
 
 workflows:
   version: 2
   node-multi-build:
     jobs:
-      - node-v10
-      - node-v11
-      - node-v12
+      - build-and-test-node-10
+      - build-and-test-node-11
+      - build-and-test-node-12
+      - test_ts-node-10:
+          requires:
+            - build-and-test-node-10
+      - test_ts-node-11:
+          requires:
+            - build-and-test-node-11
+      - test_ts-node-12:
+          requires:
+            - build-and-test-node-12
+      - test_js-node-10:
+          requires:
+            - build-and-test-node-10
+      - test_js-node-11:
+          requires:
+            - build-and-test-node-11
+      - test_js-node-12:
+          requires:
+            - build-and-test-node-12
