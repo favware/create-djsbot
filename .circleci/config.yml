@@ -23,7 +23,7 @@ run_yarn: &run_yarn
 save_dist: &save_dist
   save_cache:
     name: Save dist folder
-    key: dist-latest
+    key: dist-latest-{{ .Branch }}
     paths:
       - dist
 
@@ -38,7 +38,7 @@ save_yarn: &save_yarn
 restore_dist: &restore_dist
   restore_cache:
     name: Restore dist folder
-    key: dist-latest
+    key: dist-latest-{{ .Branch }}
 
 restore_yarn: &restore_yarn
   restore_cache:

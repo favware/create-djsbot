@@ -17,7 +17,6 @@
     "noUnusedLocals": true,                     /* Report errors on unused locals. */
     "removeComments": true,                     /* Do not emit comments to output. */
     "strict": true,                             /* Enable all strict type-checking options. */
-    "importHelpers": true,                      /* Import emit helpers from 'tslib'. */
     "baseUrl": "src",                           /* Base directory to resolve non-absolute module names. */
     "paths": {                                  /* A series of entries which re-map imports to lookup locations relative to the 'baseUrl'. */
       "@commands/*": ["commands/*"],            /* Maps the "commands" folder under "src" to be directly available */
