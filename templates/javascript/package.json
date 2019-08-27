@@ -35,7 +35,7 @@
     "concurrently": "4",
     "cross-env": "5",
     "eslint": "6.2.2",
-    "eslint-config-standard": "14.0.1",
+    "eslint-config-standard": "14.1.0",
     "eslint-plugin-import": "2",
     "eslint-plugin-node": "9.1.0",
     "eslint-plugin-promise": "4",
