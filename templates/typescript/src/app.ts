@@ -16,25 +16,27 @@ config({
   debug: false,
 });
 
+(async () => {
 /**
  * Checks if you've set the bot token environment variable
  */
-if (!process.env.BOT_TOKEN) {
-  // tslint:disable-next-line:no-console
-  console.error(
-    chalk.red(stripIndents`
+  if (!process.env.BOT_TOKEN) {
+  // Tslint:disable-next-line:no-console
+    console.error(
+      chalk.red(stripIndents`
         Looks like you didn't set the BOT_TOKEN in the .env file
         Please set your token in the file.
         You can find more info about these tokens in the README.
     `)
-  );
-} else {
+    );
+  } else {
   // Add module aliases
-  moduleAlias.addAlias('@utils', `${__dirname}/utils`);
-  moduleAlias.addAlias('@commands', `${__dirname}/commands`);
+    moduleAlias.addAlias('@utils', `${__dirname}/utils`);
+    moduleAlias.addAlias('@commands', `${__dirname}/commands`);
 
-  /**
+    /**
    * Creates and initializes your bot
    */
-  new DiscordBot(process.env.BOT_TOKEN!).init();
-}
+    await new DiscordBot(process.env.BOT_TOKEN!).init();
+  }
+})();
