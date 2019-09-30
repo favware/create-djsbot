@@ -59,11 +59,9 @@ Requires you have set the token in the `.env` file!
 
 Checks your code for linting errors
 
-### `npx gulp --src ./src/path/to/single/ts/file`
+### `npm run reload`
 
-*e.g. `npx gulp --src ./src/commands/info/userinfo.ts`
-
-To recompile just a single file (i.e. for hot reloading) this project uses Gulp.
+To recompile just a single file (i.e. for hot reloading).
 
 ## Documenation
 
