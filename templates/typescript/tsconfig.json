@@ -6,8 +6,8 @@
     "rootDir": "./src",                         /* List of root folders whose combined content represents the structure of the project at runtime. */
     "forceConsistentCasingInFileNames": true,   /* Disallow inconsistently-cased references to the same file. */
     "esModuleInterop": true,                    /* Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'. */
-    "lib": ["es2018"],                          /* Specify library files to be included in the compilation. */
-    "target": "es6",                            /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019' or 'ESNEXT'. */
+    "lib": ["esnext","dom"],                    /* Specify library files to be included in the compilation. */
+    "target": "esnext",                         /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019' or 'ESNEXT'. */
     "module": "commonjs",                       /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'. */
     "moduleResolution": "node",                 /* Specify module resolution strategy: 'node' (Node.js) or 'classic' (TypeScript pre-1.6). */
     "newLine": "lf",                            /* Use the specified end of line sequence to be used when emitting files: "crlf" (windows) or "lf" (unix).”*/
@@ -15,6 +15,7 @@
     "noErrorTruncation": true,                  /* Do not truncate error messages.*/
     "noImplicitReturns": true,                  /* Report error when not all code paths in function return a value. */
     "noUnusedLocals": true,                     /* Report errors on unused locals. */
+    "resolveJsonModule": true,                  /* Include modules import with .json extension, allows you to do something like "import data from data.json"*/
     "removeComments": true,                     /* Do not emit comments to output. */
     "strict": true,                             /* Enable all strict type-checking options. */
     "baseUrl": "src",                           /* Base directory to resolve non-absolute module names. */
@@ -23,10 +24,11 @@
       "@utils/*": ["utils/*"]                   /* Maps the "util" folder under "src" to be directly available, for example you can do "import winston from '@utils/winston'"*/
     },
     "experimentalDecorators": true,             /* Enables experimental support for ES7 decorators. */
-    "resolveJsonModule": true,                  /* Include modules import with .json extension, allows you to do something like "import data from data.json"*/
+    "emitDecoratorMetadata": true,              /* Enables experimental support for ES7 decorators. */
     "allowJs": true,                            /* Allows files with the .js extension so you can migrate more easily */
     "checkJs": true,                            /* Attempt to typecheck your .js files */
-    "incremental": false                        /* OPTIONAL: Speeds up incremental builds by saving some information of the previous build */
+    "incremental": true,                        /* Speeds up incremental builds by saving some information of the previous build */
+    "importHelpers": true                       /* Utilizes tslib to cut down on re-defining import helpers */
   },
   "include": ["src/**/*.ts"],                   /* Files that should be included in the compile process */
   "exclude": ["node_modules", "dist"]           /* Files that should be excluded from the compile process */
