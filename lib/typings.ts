@@ -5,11 +5,11 @@ export type IYargsOptionData = {
   choices?: string[];
 } & OptionData;
 
-export type YargOptions = {
+export interface YargOptions {
   [key: string]: IYargsOptionData | { default: boolean };
-};
+}
 
-export type YargResult = {
+export interface YargResult {
   help: boolean;
   version: boolean;
   interactive: boolean;
@@ -24,14 +24,14 @@ export type YargResult = {
   prefix: '!' | string;
   ownerid: string;
   token: string;
-};
+}
 
 export type ICreateDJSBotInfo = {
   shortName?: string;
   botDestination?: string;
 } & YargResult;
 
-export type DefaultYargOptions = {
+export interface DefaultYargOptions {
   author: string;
   license: 'MIT' | 'GPL-3.0-or-later' | 'Apache-2.0' | 'Unlicense' | 'MPL-2.0';
   manager: 'npm' | 'yarn';
@@ -41,4 +41,4 @@ export type DefaultYargOptions = {
   prefix: '!' | string;
   ownerid: string;
   token: string;
-};
+}

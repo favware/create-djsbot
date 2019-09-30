@@ -22,11 +22,11 @@ const { printf } = format;
 const botName = '{{name}}';
 
 export const log = createLogger({
-    format: printf(info => `[${moment().format('DD-MM-YYYY HH:mm:ssZ')}] [${info.level}]: ${info.message}`),
-    transports: [
-        new transports.File({ filename: `${path.join(__dirname, '..', 'data', 'winston')}/${botName}.log` }),
-        new transports.Console()
-    ],
+  format: printf(info => `[${moment().format('DD-MM-YYYY HH:mm:ssZ')}] [${info.level}]: ${info.message}`),
+  transports: [
+    new transports.File({ filename: `${path.join(__dirname, '..', 'data', 'winston')}/${botName}.log` }),
+    new transports.Console()
+  ],
 });
 
 export default log;

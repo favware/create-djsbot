@@ -1,12 +1,9 @@
-# This file defines standard code style for this project and gets used by editors such as VSCode, Atom and IntelliJ IDEA
-
 root = true
 
 [*]
-indent_style = space
 end_of_line = lf
+insert_final_newline = false
 charset = utf-8
+indent_style = space
 indent_size = 2
 trim_trailing_whitespace = true
-insert_final_newline = false
-max_line_length = 200

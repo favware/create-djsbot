@@ -1,0 +1,17 @@
+{
+  "extends": [
+    "@favware"
+  ],
+  "parserOptions": {
+    "createDefaultProgram": true
+  },
+  "rules": {
+    "new-cap": [
+      "error",
+      {
+        "capIsNewExceptionPattern": "^[A-Z][a-z]+(?:[A-Z][a-z]+)*$"
+      }
+    ],
+    "@typescript-eslint/no-explicit-any": "off"
+  }
+}

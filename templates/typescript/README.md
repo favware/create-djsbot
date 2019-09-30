@@ -12,13 +12,9 @@ This project uses dotenv for configuration such as your token. The values are st
 BOT_TOKEN="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"
 ```
 
-## Notes about the TypeScript template
+## Setting up development environment
 
-A few notes should be shared about the TypeScript template that are important to note
-
-1. It uses forks of Discord.JS and Discord.JS-Commando that are based on the "master" branch so please refer to the "master" documentation. The reason for this is that Commando has added a lot of extra TypeScript support since it's latest stable release and when using the "master" branch for Discord.JS-Commando then the master branch for Discord.JS should also be used. I (Favna) manage these forks and ensure they are always stable before publishing any updates as I use them in my own bot
-
-2. The TypeScript version uses `better-sqlite3` as SQLite library. This is because in performance comparisons it performs better than libraries such as SQLite. The caveat however is that it needs a bit of extra work in setup. If the template fails to run the `npm install` or `yarn install`, please follow these instructions before getting support:
+If the template fails to run the `npm install` or `yarn install`, please follow these instructions before getting support:
 
    - Windows:
      - run `npm i windows-build-tools --production --vs2015 --add-python-to-PATH --global` in an administrative CMD or Powershell
@@ -29,25 +25,26 @@ A few notes should be shared about the TypeScript template that are important to
       -  Install build-essential: `sudo apt-get install -y build-essential`
    - Other OS / distro's:
       - Please google how to install build essentials such as GCC and Make
- 
 
-3. In TypeScript you should to use ES6 imports/exports rather than CommonJS `module.exports` and `require` as it's far more efficient, adds a lot of cool features such as default exports, named exports and advanced imports and it's far easier to write and remember.
+## Notes about the TypeScript template
 
-4. The Gulpfile is for recompiling single JavaScript files into TypeScript files for hot-reloading commands once you have your bot running on some kind of server
+A few notes should be shared about the TypeScript template that are important to note
 
-   - gulp is a taskrunner, much like NPM scripts but far more configurable
+1. It uses forks of Discord.JS and Discord.JS-Commando that are based on the "master" branch so please refer to the "master" documentation. The reason for this is that Commando has added a lot of extra TypeScript support since it's latest stable release and when using the "master" branch for Discord.JS-Commando then the master branch for Discord.JS should also be used. I (Favna) manage these forks and ensure they are always stable before publishing any updates as I use them in my own bot
 
-5. You should **not** use `ts-node` to run your bot unless during development. It is very slow and inefficient for production environments.
+2. In TypeScript you should to use ES6 imports/exports rather than CommonJS `module.exports` and `require` as it's far more efficient, adds a lot of cool features such as default exports, named exports and advanced imports and it's far easier to write and remember.
 
-6. Therefore always compile your bot to JavaScript using `npm run build` or `yarn build`
+3. You should **not** use `ts-node` to run your bot unless during development. It is very slow and inefficient for production environments.
 
-7. And do not remove anything from the `build`, `prebuild`, `postbuild`, `copyfiles` or `replace` scripts. Doing so will either cause your bot to not build properly at all, or cause inefficiencies in the long term. Adding to it is perfectly fine however!
+4. Therefore always compile your bot to JavaScript using `npm run build` or `yarn build`
 
-8. The TypeScript config allows you to use aliases for easier accessing the `commands` and `utils` folders. For example if you need to log something you can `import log from '@utils/winston'` (which imports the `winston.ts` file at `src/utils/winston.ts`, no matter how many subfolders deep you are) then use this as `log.info()`.
+5. And do not remove anything from the `build`, `prebuild`, `postbuild`, `copyfiles` or `replace` scripts. Doing so will either cause your bot to not build properly at all, or cause inefficiencies in the long term. Adding to it is perfectly fine however!
 
-9. When getting support anywhere always specify that you are writing TypeScript to get the best support.
+6. The TypeScript config allows you to use aliases for easier accessing the `commands` and `utils` folders. For example if you need to log something you can `import log from '@utils/winston'` (which imports the `winston.ts` file at `src/utils/winston.ts`, no matter how many subfolders deep you are) then use this as `log.info()`.
 
-10. You can always join my server for support as well.
+7. When getting support anywhere always specify that you are writing TypeScript to get the best support.
+
+8. You can always join my server for support as well.
 
 ## Available Scripts
 
