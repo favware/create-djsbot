@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.1.0](https://github.com/favware/create-djsbot/compare/v2.0.1...v2.1.0) (2019-09-30)
+
+
+### Bug Fixes
+
+* **package:** update yargs-interactive to version 3.0.0 ([128f8df](https://github.com/favware/create-djsbot/commit/128f8df))
+* dont use tslib ([90af376](https://github.com/favware/create-djsbot/commit/90af376))
+
+
+### Features
+
+* overhaul typescript template ([04c8378](https://github.com/favware/create-djsbot/commit/04c8378))
+* update templates ([7e2d82b](https://github.com/favware/create-djsbot/commit/7e2d82b))
+
 ### [2.0.1](https://github.com/favware/create-djsbot/compare/v2.0.0...v2.0.1) (2019-08-24)
 
 
