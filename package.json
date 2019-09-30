@@ -28,7 +28,8 @@
     "build": "tsc",
     "prepublishOnly": "yarn clean && yarn build",
     "clean": "rimraf ./dist ./tsconfig.tsbuildinfo",
-    "up": "yarn upgrade-interactive --latest"
+    "up": "yarn upgrade-interactive --latest",
+    "standard": "yarn standard-version"
   },
   "keywords": [
     "discord",
