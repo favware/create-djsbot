@@ -73,7 +73,7 @@ commands:
         command: node ./dist/index.js --interactive=false --name=typescript_template --description=typescript_bot --author=circleci --license=MIT --repo='https://github.com/favna/tsbot' --gitinit=false --manager=yarn --template=typescript --prefix=. --ownerid=1234 --token=12345
     - run:
         name: Verify TS Template
-        command: yarn test:ci ts_template
+        command: yarn test ts_template
   template_js:
     description: Tests the library with the JavaScript template
     steps:
@@ -86,7 +86,7 @@ commands:
         command: node ./dist/index.js --interactive=false --name=javascript_template --description=javascript_bot --author=circleci --license=MIT --repo='https://github.com/favna/jsbot' --gitinit=false --manager=yarn --template=javascript --prefix=. --ownerid=1234 --token=12345
     - run:
         name: Verify JS Template
-        command: yarn test:ci js_template
+        command: yarn test js_template
 
 # List of jobs
 jobs:
