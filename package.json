@@ -41,7 +41,7 @@
   "dependencies": {
     "chalk": "^2.4.2",
     "common-tags": "^1.8.0",
-    "execa": "^2.1.0",
+    "execa": "^3.2.0",
     "git-config-path": "^2.0.0",
     "github-username": "^5.0.1",
     "globby": "^10.0.1",
