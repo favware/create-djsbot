@@ -278,9 +278,9 @@
     eslint-plugin-jest "^22.19.0"
 
 "@favware/ts-config@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@favware/ts-config/-/ts-config-1.0.1.tgz#eac3d19c72f1b9fe5730e7391fcbbad66a67ed10"
-  integrity sha512-RQavGuQJfgMLGgRz3C6uXcnB3UxIivWfwwpm+4VaB5um8vbDSSYJSNYmlfGTyfzgrJWUawM9a0GS7OoJNq6JQA==
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@favware/ts-config/-/ts-config-1.0.2.tgz#c88785492c26881f576724146d0d63795a96283f"
+  integrity sha512-E4LAzMR+k6OVk4q2MTJpTibF3DhTKv5bFyHGEpsP9lqIQh7kufaY0f8kYDQE7MbdbQ1soZm2qkFIer4/EA6MDw==
 
 "@jest/console@^24.7.1", "@jest/console@^24.9.0":
   version "24.9.0"
