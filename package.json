@@ -56,8 +56,8 @@
   "devDependencies": {
     "@commitlint/cli": "^8.1.0",
     "@commitlint/config-conventional": "^8.1.0",
-    "@favware/eslint-config": "^3.1.4",
-    "@favware/ts-config": "^1.0.2",
+    "@favware/eslint-config": "^3.1.5",
+    "@favware/ts-config": "^1.1.0",
     "@types/common-tags": "^1.8.0",
     "@types/git-config-path": "^2.0.0",
     "@types/jest": "^24.0.22",
