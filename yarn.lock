@@ -269,9 +269,9 @@
     find-up "^4.0.0"
 
 "@favware/eslint-config@^3.1.3":
-  version "3.1.3"
-  resolved "https://registry.yarnpkg.com/@favware/eslint-config/-/eslint-config-3.1.3.tgz#b80a4f885266ccc4109876a44315e40482d18187"
-  integrity sha512-bry9Pa5xxkMvW9oKV1wGXaU2PGkVIQHsj9/JURiGWGbbq2Aj+O0NSofwVdpCvJSx/fREmq9DobthIvUcvriXbw==
+  version "3.1.4"
+  resolved "https://registry.yarnpkg.com/@favware/eslint-config/-/eslint-config-3.1.4.tgz#2fffc572c4af7d929560841975218857cff3d2ed"
+  integrity sha512-w0/nCdSa1Dy/eq1kbSyBW840BX//eqNkg1SStDrlQFzIHppp4lcvi38FygXgHCiYrCIMZ8v8rI/1HIWbV/Js/Q==
   dependencies:
     "@typescript-eslint/eslint-plugin" "~2.3.3"
     "@typescript-eslint/parser" "~2.3.3"
