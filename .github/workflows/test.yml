@@ -33,7 +33,7 @@ jobs:
         run: yarn build
 
   test:
-    name: Node v12 - ubuntu-latest
+    name: test
     needs: build-cache
     runs-on: ubuntu-latest
     steps:
