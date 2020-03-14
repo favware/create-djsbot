@@ -28,7 +28,7 @@ jobs:
         uses: actions/cache@v1
         with:
           path: dist
-          key: ${{ runner.os }}-12-${{ hashFiles('**/src/createDJSBot.ts') }}
+          key: ${{ runner.os }}-12-${{ hashFiles('**/createDJSBot.ts') }}
       - name: Build package
         run: yarn build
 
@@ -58,7 +58,7 @@ jobs:
         uses: actions/cache@v1
         with:
           path: dist
-          key: ${{ runner.os }}-${{ matrix.node_version }}-${{ hashFiles(matrix.os == 'windows-latest' && '**\src\createDJSBot.ts' || '**/src/createDJSBot.ts') }}
+          key: ${{ runner.os }}-${{ matrix.node_version }}-${{ hashFiles(matrix.os == 'windows-latest' && '**\createDJSBot.ts' || '**/createDJSBot.ts') }}
       - name: Create TS Template
         run: node ./dist/index.js --interactive=false --name=typescript_template --description=typescript_bot --author=circleci --license=MIT --repo='https://github.com/favna/tsbot' --gitinit=false --manager=yarn --template=typescript --prefix=. --ownerid=1234 --token=12345
       - name: Test
@@ -90,7 +90,7 @@ jobs:
         uses: actions/cache@v1
         with:
           path: dist
-          key: ${{ runner.os }}-${{ matrix.node_version }}-${{ hashFiles(matrix.os == 'windows-latest' && '**\src\createDJSBot.ts' || '**/src/createDJSBot.ts') }}
+          key: ${{ runner.os }}-${{ matrix.node_version }}-${{ hashFiles(matrix.os == 'windows-latest' && '**\createDJSBot.ts' || '**/createDJSBot.ts') }}
       - name: Create JS Template
         run: node ./dist/index.js --interactive=false --name=javascript_template --description=javascript_bot --author=circleci --license=MIT --repo='https://github.com/favna/jsbot' --gitinit=false --manager=yarn --template=javascript --prefix=. --ownerid=1234 --token=12345
       - name: Test
