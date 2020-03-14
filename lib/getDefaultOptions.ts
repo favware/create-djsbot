@@ -3,7 +3,6 @@ import githubUsername from 'github-username';
 import { promise as cliSpinner } from 'ora';
 import { sync as parseGitConfig } from 'parse-git-config';
 import which from 'which';
-
 import { DefaultYargOptions } from './typings';
 
 export const fetchDefaults = async (name: string, author: string): Promise<DefaultYargOptions> => {
@@ -17,7 +16,7 @@ export const fetchDefaults = async (name: string, author: string): Promise<Defau
     repo: '',
     prefix: '!',
     ownerid: '',
-    token: '',
+    token: ''
   };
 
   if (gitConfigPath && !author) {
@@ -34,7 +33,7 @@ export const fetchDefaults = async (name: string, author: string): Promise<Defau
 
   if (which.sync('yarn', { nothrow: true })) defaultValues.manager = 'yarn';
 
-  return {...defaultValues, repo: `https://github.com/${defaultValues.author}/${name}.git`};
+  return { ...defaultValues, repo: `https://github.com/${defaultValues.author}/${name}.git` };
 };
 
 export default fetchDefaults;

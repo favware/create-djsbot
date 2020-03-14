@@ -93,21 +93,21 @@ Options:
   --prefix       What is the bot prefix you want to set as default?
   --ownerid      What is your Discord userID that will be registered as the bot owner?
   --token        And lastly, do you already have a token the bot will use?
-  ```
+```
 
 ## Setting up development environment
 
 If the template fails to run the `npm install` or `yarn install`, please follow these instructions before getting support:
 
-   - Windows:
-     - run `npm i windows-build-tools --production --vs2015 --add-python-to-PATH --global` in an administrative CMD or Powershell
-   - MacOS:
-     - Install the XCode Selects tools: `xcode-select --install`
-     - Install Brew: `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
-   - Linux Debian / Ubuntu:
-      -  Install build-essential: `sudo apt-get install -y build-essential`
-   - Other OS / distro's:
-      - Please google how to install build essentials such as GCC and Make
+- Windows:
+  - run `npm i windows-build-tools --production --vs2015 --add-python-to-PATH --global` in an administrative CMD or Powershell
+- MacOS:
+  - Install the XCode Selects tools: `xcode-select --install`
+  - Install Brew: `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+- Linux Debian / Ubuntu:
+  - Install build-essential: `sudo apt-get install -y build-essential`
+- Other OS / distro's:
+  - Please google how to install build essentials such as GCC and Make
 
 ## Notes about the TypeScript template
 
@@ -129,7 +129,7 @@ A few notes should be shared about the TypeScript template that are important to
 
 8. You can always join my server for support as well.
 
-* * *
+---
 
 # About
 

@@ -9,7 +9,7 @@
   },
   "author": "@favware",
   "license": "MIT",
-  "homepage": "https://favware.tech/createdjsbot",
+  "homepage": "https://favware.tech/create-djsbot",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/favware/create-djsbot.git"
@@ -24,7 +24,6 @@
     "lint": "eslint lib test --ext js,ts --fix",
     "test": "jest",
     "start": "ts-node ./lib/index.ts",
-    "prebuild": "yarn lint",
     "build": "tsc",
     "prepublishOnly": "yarn clean && yarn build",
     "clean": "rimraf ./dist ./tsconfig.tsbuildinfo",
@@ -40,7 +39,6 @@
   ],
   "dependencies": {
     "chalk": "^3.0.0",
-    "common-tags": "^1.8.0",
     "execa": "^4.0.0",
     "git-config-path": "^2.0.0",
     "github-username": "^5.0.1",
@@ -72,6 +70,8 @@
     "jest": "^25.1.0",
     "jsonfile": "^6.0.1",
     "lint-staged": "^10.0.8",
+    "prettier": "^1.19.1",
+    "pretty-quick": "^2.0.1",
     "rimraf": "^3.0.2",
     "standard-version": "^7.1.0",
     "ts-jest": "^25.2.1",
@@ -85,7 +85,7 @@
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "yarn lint-staged"
+      "pre-commit": "pretty-quick --staged && yarn lint-staged"
     }
   },
   "commitlint": {
@@ -94,8 +94,8 @@
     ]
   },
   "lint-staged": {
-    "*.{js,ts,tsx}": [
-      "yarn lint"
+    "*.ts": [
+      "eslint --fix --ext ts"
     ]
   },
   "config": {

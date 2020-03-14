@@ -1,14 +1,3 @@
-import { OptionData } from 'yargs-interactive';
-
-export type IYargsOptionData = {
-  type: 'input' | 'confirm' | 'list';
-  choices?: string[];
-} & OptionData;
-
-export interface YargOptions {
-  [key: string]: IYargsOptionData | { default: boolean };
-}
-
 export interface YargResult {
   help: boolean;
   version: boolean;
