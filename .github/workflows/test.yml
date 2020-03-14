@@ -36,7 +36,7 @@ jobs:
       - name: Build package
         run: yarn build
 
-  template-ts:
+  test:
     name: Node v${{ matrix.node_version }} - ${{ matrix.os }}
     needs: build-cache
     runs-on: ${{ matrix.os }}
@@ -65,36 +65,6 @@ jobs:
           key: ${{ runner.os }}-${{ matrix.node_version }}-${{ hashFiles(matrix.os == 'windows-latest' && '**\createDJSBot.ts' || '**/createDJSBot.ts') }}
       - name: Create TS Template
         run: node ./dist/index.js --interactive=false --name=typescript_template --description=typescript_bot --author=circleci --license=MIT --repo='https://github.com/favna/tsbot' --gitinit=false --manager=yarn --template=typescript --prefix=. --ownerid=1234 --token=12345
-      - name: Test
-        run: yarn test
-
-  template-js:
-    name: Node v${{ matrix.node_version }} - ${{ matrix.os }}
-    needs: build-cache
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        node_version: [10, 12, 13]
-        os: [ubuntu-latest, windows-latest, macOS-latest]
-    steps:
-      - name: Checkout Project
-        uses: actions/checkout@v1
-      - name: Use Node.js ${{ matrix.node_version }}
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node_version }}
-      - name: Restore Dependency Cache
-        uses: actions/cache@v1
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-${{ matrix.node_version }}-${{ hashFiles(matrix.os == 'windows-latest' && '**\yarn.lock' || '**/yarn.lock') }}
-      - name: Install Dependencies
-        run: yarn
-      - name: Restore Build Cache
-        uses: actions/cache@v1
-        with:
-          path: dist
-          key: ${{ runner.os }}-${{ matrix.node_version }}-${{ hashFiles(matrix.os == 'windows-latest' && '**\createDJSBot.ts' || '**/createDJSBot.ts') }}
       - name: Create JS Template
         run: node ./dist/index.js --interactive=false --name=javascript_template --description=javascript_bot --author=circleci --license=MIT --repo='https://github.com/favna/jsbot' --gitinit=false --manager=yarn --template=javascript --prefix=. --ownerid=1234 --token=12345
       - name: Test
