@@ -13,7 +13,7 @@ jobs:
     strategy:
       matrix:
         node_version: [10, 12, 13]
-        os: [ubuntu-latest, windows-latest, macOS-latest]
+        os: [ubuntu-latest, macOS-latest]
     steps:
       - name: Checkout Project
         uses: actions/checkout@v2
@@ -25,14 +25,14 @@ jobs:
         uses: actions/cache@v1
         with:
           path: node_modules
-          key: ${{ runner.os }}-${{ matrix.node_version }}-${{ hashFiles(matrix.os == 'windows-latest' && '**\yarn.lock' || '**/yarn.lock') }}
+          key: ${{ runner.os }}-${{ matrix.node_version }}-${{ hashFiles('**/yarn.lock') }}
       - name: Install Dependencies
         run: yarn
       - name: Restore Build Cache
         uses: actions/cache@v1
         with:
           path: dist
-          key: ${{ runner.os }}-${{ matrix.node_version }}-${{ hashFiles(matrix.os == 'windows-latest' && '**\createDJSBot.ts' || '**/createDJSBot.ts') }}
+          key: ${{ runner.os }}-${{ matrix.node_version }}-${{ hashFiles('**/createDJSBot.ts') }}
       - name: Build package
         run: yarn build
 
@@ -43,7 +43,7 @@ jobs:
     strategy:
       matrix:
         node_version: [10, 12, 13]
-        os: [ubuntu-latest, windows-latest, macOS-latest]
+        os: [ubuntu-latest, macOS-latest]
     steps:
       - name: Checkout Project
         uses: actions/checkout@v2
@@ -55,14 +55,14 @@ jobs:
         uses: actions/cache@v1
         with:
           path: node_modules
-          key: ${{ runner.os }}-${{ matrix.node_version }}-${{ hashFiles(matrix.os == 'windows-latest' && '**\yarn.lock' || '**/yarn.lock') }}
+          key: ${{ runner.os }}-${{ matrix.node_version }}-${{ hashFiles('**/yarn.lock') }}
       - name: Install Dependencies
         run: yarn
       - name: Restore Build Cache
         uses: actions/cache@v1
         with:
           path: dist
-          key: ${{ runner.os }}-${{ matrix.node_version }}-${{ hashFiles(matrix.os == 'windows-latest' && '**\createDJSBot.ts' || '**/createDJSBot.ts') }}
+          key: ${{ runner.os }}-${{ matrix.node_version }}-${{ hashFiles('**/createDJSBot.ts') }}
       - name: Create TS Template
         run: node ./dist/index.js --interactive=false --name=typescript_template --description=typescript_bot --author=circleci --license=MIT --repo='https://github.com/favna/tsbot' --gitinit=false --manager=yarn --template=typescript --prefix=. --ownerid=1234 --token=12345
       - name: Create JS Template
