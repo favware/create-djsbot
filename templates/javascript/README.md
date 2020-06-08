@@ -2,7 +2,7 @@
 
 > {{description}}
 
-This project was bootstrapped with [Create DJS Bot](https://favware.tech/createdjsbot).
+This project was bootstrapped with [Create DJS Bot](https://favware.tech/create-djsbot).
 
 ## Before running any code
 

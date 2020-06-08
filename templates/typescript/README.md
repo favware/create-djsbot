@@ -2,7 +2,7 @@
 
 > {{description}}
 
-This priject was bootstrapped with [Create DJS Bot](https://favware.tech/createdjsbot).
+This priject was bootstrapped with [Create DJS Bot](https://favware.tech/create-djsbot).
 
 ## Before running any code
 
@@ -16,15 +16,15 @@ BOT_TOKEN="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"
 
 If the template fails to run the `npm install` or `yarn install`, please follow these instructions before getting support:
 
-   - Windows:
-     - run `npm i windows-build-tools --production --vs2015 --add-python-to-PATH --global` in an administrative CMD or Powershell
-   - MacOS:
-     - Install the XCode Selects tools: `xcode-select --install`
-     - Install Brew: `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
-   - Linux Debian / Ubuntu:
-      -  Install build-essential: `sudo apt-get install -y build-essential`
-   - Other OS / distro's:
-      - Please google how to install build essentials such as GCC and Make
+- Windows:
+  - run `npm i windows-build-tools --production --vs2015 --add-python-to-PATH --global` in an administrative CMD or Powershell
+- MacOS:
+  - Install the XCode Selects tools: `xcode-select --install`
+  - Install Brew: `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+- Linux Debian / Ubuntu:
+  - Install build-essential: `sudo apt-get install -y build-essential`
+- Other OS / distro's:
+  - Please google how to install build essentials such as GCC and Make
 
 ## Notes about the TypeScript template
 
