@@ -869,10 +869,10 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-12.11.7.tgz#57682a9771a3f7b09c2497f28129a0462966524a"
   integrity sha512-JNbGaHFCLwgHn/iCckiGSOZ1XYHsKFwREtzPwSGCVld1SGhOlmZw2D4ZI94HQCrBHbADzW9m4LER/8olJTRGHA==
 
-"@types/node@^13.13.10":
-  version "13.13.10"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-13.13.10.tgz#34a9be3cbc409fd235984bd18a130006f5234396"
-  integrity sha512-J+FbkhLTcFstD7E5mVZDjYxa1VppwT2HALE6H3n2AnBSP8uiCQk0Pyr6BkJcP38dFV9WecoVJRJmFnl9ikIW7Q==
+"@types/node@^13.13.12":
+  version "13.13.12"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-13.13.12.tgz#9c72e865380a7dc99999ea0ef20fc9635b503d20"
+  integrity sha512-zWz/8NEPxoXNT9YyF2osqyA9WjssZukYpgI4UYZpOjcyqwIUqWGkcCionaEb9Ki+FULyPyvNFpg/329Kd2/pbw==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.0"
@@ -4041,10 +4041,10 @@ lines-and-columns@^1.1.6:
   resolved "https://registry.yarnpkg.com/lines-and-columns/-/lines-and-columns-1.1.6.tgz#1c00c743b433cd0a4e80758f7b64a57440d9ff00"
   integrity sha1-HADHQ7QzzQpOgHWPe2SldEDZ/wA=
 
-lint-staged@^10.2.9:
-  version "10.2.9"
-  resolved "https://registry.yarnpkg.com/lint-staged/-/lint-staged-10.2.9.tgz#6013ecfa80829cd422446b545fd30a96bca3098c"
-  integrity sha512-ziRAuXEqvJLSXg43ezBpHxRW8FOJCXISaXU//BWrxRrp5cBdRkIx7g5IsB3OI45xYGE0S6cOacfekSjDyDKF2g==
+lint-staged@^10.2.10:
+  version "10.2.10"
+  resolved "https://registry.yarnpkg.com/lint-staged/-/lint-staged-10.2.10.tgz#f0f78bf8786bbe90e1775a0dc540f7f12b6a79b2"
+  integrity sha512-dgelFaNH6puUGAcU+OVMgbfpKSerNYsPSn6+nlbRDjovL0KigpsVpCu0PFZG6BJxX8gnHJqaZlR9krZamQsb0w==
   dependencies:
     chalk "^4.0.0"
     cli-truncate "2.1.0"
