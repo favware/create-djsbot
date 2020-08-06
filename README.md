@@ -14,8 +14,8 @@
 
 **Project Status**
 
-[![GitHub](https://img.shields.io/github/license/favware/create-djsbot?logo=github&style=flat-square)](https://github.com/favware/create-djsbot/blob/master/LICENSE.md)
-[![CircleCI](https://img.shields.io/circleci/build/github/favware/create-djsbot?logo=circleci&style=flat-square)](https://circleci.com/gh/favware/create-djsbot/tree/master)
+[![GitHub](https://img.shields.io/github/license/favware/create-djsbot?logo=github&style=flat-square)](https://github.com/favware/create-djsbot/blob/main/LICENSE.md)
+[![CircleCI](https://img.shields.io/circleci/build/github/favware/create-djsbot?logo=circleci&style=flat-square)](https://circleci.com/gh/favware/create-djsbot/tree/main)
 
 **NPM Versions**
 
